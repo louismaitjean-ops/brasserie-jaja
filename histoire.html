@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Version de validation : retirer cette ligne et robots.txt à la mise en ligne officielle -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Notre histoire — Brasserie Jaja, Paris 8e</title>
+  <meta name="description" content="L'histoire de la Brasserie Jaja, 47 rue d'Amsterdam : la salle, la cuisine maison, nos valeurs, nos producteurs et l'équipe.">
+  <link rel="alternate" hreflang="fr" href="histoire.html">
+  <link rel="alternate" hreflang="en" href="histoire.html?lang=en">
+  <meta name="theme-color" content="#BD2341">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="450" height="195">
+    <img src="assets/img/logo-jaja.png" alt="" class="logo-dark" width="450" height="195" aria-hidden="true">
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+    <a href="index.html#maison" data-i18n="nav.maison">La maison</a>
+    <a href="index.html#carte" data-i18n="nav.carte">La carte</a>
+    <a href="index.html#vins" data-i18n="nav.vins">Les vins</a>
+    <a href="index.html#avis" data-i18n="nav.avis">Avis</a>
+    <a href="histoire.html" data-i18n="nav.histoire" aria-current="page">Notre histoire</a>
+    <a href="index.html#infos" data-i18n="nav.infos">Infos</a>
+  </nav>
+  <div class="nav__end">
+    <div class="lang" role="group" aria-label="Langue">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="btn btn--red js-book" type="button" data-i18n="cta.book">Réserver</button>
+    <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span class="sr" data-i18n="nav.menu">Menu</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <img src="assets/img/rue-terrasse.jpg" alt="La Brasserie Jaja à l'angle de la rue d'Amsterdam" fetchpriority="high">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light" data-i18n="h.eyebrow">Brasserie Jaja · Paris 8e</p>
+      <h1 data-i18n="h.title">Notre histoire</h1>
+    </div>
+  </section>
+
+  <section class="story-intro">
+    <div class="wrap">
+      <p class="lead" data-i18n="h.lead">Le Jaja, c'est une brasserie parisienne au sens premier : un endroit où l'on passe le matin, où l'on revient à midi et où l'on finit la soirée.</p>
+      <div>
+        <p data-i18n="h.p1">Entre la gare Saint-Lazare et la place de Clichy, au 47 rue d'Amsterdam, nous voulions un lieu qui ressemble au quartier : vivant, sans chichis et généreux.</p>
+        <p data-i18n="h.p2">« Jaja », c'est le vieil argot parisien pour un verre de vin. Ça nous résume assez bien.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="eyebrow" data-i18n="h.tlEyebrow">Chapitre par chapitre</p>
+        <h2 class="h2" data-i18n="h.tlTitle">L'aventure Jaja</h2>
+      </div>
+      <ol>
+        <li class="tl">
+          <figure><img src="assets/img/facade-soir.jpg" alt="La façade de la brasserie" loading="lazy"></figure>
+          <div><span class="tl__num">I</span><h3 data-i18n="h.t1">L'adresse</h3><p data-i18n="h.t1p">Un angle haussmannien de la rue d'Amsterdam, avec une terrasse qui s'ouvre sur une rue piétonne. Le genre d'endroit que Paris fait mieux que personne.</p></div>
+        </li>
+        <li class="tl">
+          <figure><img src="assets/img/salle-bar.jpg" alt="La salle et le bar" loading="lazy"></figure>
+          <div><span class="tl__num">II</span><h3 data-i18n="h.t2">La salle</h3><p data-i18n="h.t2p">Pierre apparente, sol en terrazzo, banquettes en velours terracotta, chaises bistrot et un bar en laiton qui s'allume à la tombée du jour. Cosy l'hiver, grande ouverte l'été.</p></div>
+        </li>
+        <li class="tl">
+          <figure><img src="assets/img/boeuf-bourguignon.jpg" alt="Bœuf bourguignon maison" loading="lazy"></figure>
+          <div><span class="tl__num">III</span><h3 data-i18n="h.t3">La cuisine</h3><p data-i18n="h.t3p">Des classiques de brasserie faits maison avec des produits frais : bourguignon mijoté, soupe à l'oignon, tartare au couteau et planches à partager.</p></div>
+        </li>
+        <li class="tl">
+          <figure><img src="assets/img/terrasse-plats.jpg" alt="Déjeuner en terrasse" loading="lazy"></figure>
+          <div><span class="tl__num">IV</span><h3 data-i18n="h.t4">La terrasse</h3><p data-i18n="h.t4p">Du café du matin à l'apéro du soir, la terrasse est devenue le point de rendez-vous du quartier.</p></div>
+        </li>
+        <li class="tl">
+          <figure><img src="assets/img/bieres-terrasse.jpg" alt="Un verre en terrasse le soir" loading="lazy"></figure>
+          <div><span class="tl__num">V</span><h3 data-i18n="h.t5">Aujourd'hui</h3><p data-i18n="h.t5p">Ouverts 7 jours sur 7, en service continu, et plus de 950 avis Google pour une moyenne de 4,4/5. Merci d'en faire partie.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="valeurs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--light" data-i18n="h.vEyebrow">Ce qui compte pour nous</p>
+        <h2 class="h2" data-i18n="h.vTitle">Nos valeurs</h2>
+      </div>
+      <div class="valeurs__grid">
+        <div class="valeur"><span class="valeur__n">01</span><h3 data-i18n="h.v1">Fait maison</h3><p data-i18n="h.v1p">Sauces, desserts, soupes : ce qui peut être fait ici est fait ici, tous les jours.</p></div>
+        <div class="valeur"><span class="valeur__n">02</span><h3 data-i18n="h.v2">Généreux</h3><p data-i18n="h.v2p">De vraies assiettes, des prix justes, et une carte qui marche aussi bien au petit déjeuner qu'au dîner tardif.</p></div>
+        <div class="valeur"><span class="valeur__n">03</span><h3 data-i18n="h.v3">Accueillant</h3><p data-i18n="h.v3p">Habitués, collègues, touristes, chiens : tout le monde a sa place au Jaja.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sourcing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="h.sEyebrow">Sourcing</p>
+        <h2 class="h2" data-i18n="h.sTitle">Avec qui nous travaillons</h2>
+      </div>
+      <div class="sourcing__grid">
+        <div class="source"><span>Aveyron</span><h3>Maison Conquet</h3><p data-i18n="h.s1">La charcuterie de nos planches, sélectionnée chez ce charcutier artisan de l'Aveyron.</p></div>
+        <div class="source"><span>Bourgogne</span><h3>Domaine Vincent Wengier</h3><p data-i18n="h.s2">Petit Chablis et Aligoté d'un domaine familial bourguignon.</p></div>
+        <div class="source"><span>Vallée du Rhône</span><h3>Maison Paul Jaboulet</h3><p data-i18n="h.s3">Côtes du Rhône bio et Crozes-Hermitage d'une maison historique du Rhône.</p></div>
+        <div class="source"><span>Champagne</span><h3>Haton &amp; Fils</h3><p data-i18n="h.s4">Un champagne de vigneron de la vallée de la Marne, au verre ou à la bouteille.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipe">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="h.eEyebrow">L'équipe</p>
+        <h2 class="h2" data-i18n="h.eTitle">Ceux qui font le Jaja</h2>
+      </div>
+      <!-- Remplacer photos et prénoms par ceux de l'équipe -->
+      <div class="equipe__grid">
+        <figure class="membre"><div class="membre__photo"><img src="assets/img/soupe-oignon.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e1">En cuisine</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-entree.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e2">En salle</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-comptoir.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e3">Au bar</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-miroir.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e4">Direction</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 class="h2" data-i18n="h.ctaTitle">Le mieux pour nous connaître, c'est de passer.</h2>
+      <div class="hero__cta">
+        <button class="btn btn--red js-book" type="button" data-i18n="cta.bookTable">Réserver une table</button>
+        <a class="btn btn--ghost" href="index.html" data-i18n="h.back">Retour à l'accueil</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="footer__logo" width="450" height="195" loading="lazy">
+    <div>
+      <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
+      <p><a href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener">Instagram @brasseriejaja</a></p>
+    </div>
+    <div class="footer__small">
+      <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
+      <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js?v=8"></script>
+</body>
+</html>

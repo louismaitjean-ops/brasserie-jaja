@@ -1,0 +1,150 @@
+/*
+ * TRADUCTIONS
+ * Le français est écrit directement dans les pages HTML.
+ * Ici : l'anglais pour chaque élément portant data-i18n="clé",
+ * et les petits textes générés par le script (carte, avis…) dans les deux langues.
+ */
+window.I18N = {
+  en: {
+    "skip": "Skip to the menu",
+    "nav.maison": "The place",
+    "nav.carte": "Menu",
+    "nav.vins": "Wine",
+    "nav.avis": "Reviews",
+    "nav.histoire": "Our story",
+    "nav.infos": "Visit",
+    "nav.menu": "Menu",
+    "cta.book": "Book",
+    "cta.bookTable": "Book a table",
+    "cta.menu": "See the menu",
+
+    "hero.eyebrow": "Bar · Brasserie · Restaurant",
+    "hero.lead": "47 rue d'Amsterdam, between Saint-Lazare and Place de Clichy. From the first coffee to the last glass, every day.",
+    "reviews.word": "reviews",
+
+    "maison.eyebrow": "The place",
+    "maison.title": "A neighbourhood brasserie, the way we like them.",
+    "maison.p1": "A lovely terrace on a pedestrian street, a cosy dining room in winter and wide open in summer, velvet banquettes and a bar where you'll happily linger.",
+    "maison.p2": "In the kitchen, homemade brasserie classics and fresh produce: beef bourguignon, French onion soup, hand-cut tartare, boards to share. Come for a proper meal or just a drink with friends.",
+    "maison.m1h": "From 8am",
+    "maison.m1": "Coffee, pastries and scrambled eggs",
+    "maison.m2h": "Lunch & dinner",
+    "maison.m2": "All-day service, homemade food",
+    "maison.m3h": "Until 1am",
+    "maison.m3": "Wine, beer and cocktails on the terrace",
+
+    "sig.eyebrow": "The classics",
+    "sig.title": "What people come here for.",
+    "sig.piece": "Butcher's cut",
+    "sig.ardoise": "See board",
+    "sig.soupe": "French onion soup",
+
+    "carte.eyebrow": "Served all day",
+    "carte.title": "The menu",
+    "filters.label": "Filter:",
+    "diet.veg": "Vegetarian",
+    "diet.vegan": "Vegan",
+    "diet.gf": "Gluten-free",
+    "diet.lf": "Dairy-free",
+    "carte.legal": "Net prices in euros, service included. Allergen information is indicative: please ask our team, they will be glad to help.",
+
+    "vins.eyebrow": "By the glass or the bottle",
+    "vins.title": "Wine",
+    "vins.intro": "Easy-drinking wines by the glass, and a few fine bottles from Burgundy, the Rhône and Bordeaux for special occasions.",
+
+    "avis.eyebrow": "Google reviews",
+    "avis.based": "From",
+    "avis.reviews": "customer reviews",
+    "avis.all": "All reviews",
+    "avis.write": "Leave a review",
+
+    "teaser.eyebrow": "Our story",
+    "teaser.title": "A corner of Paris with character.",
+    "teaser.p": "Stone, zinc, terrazzo and velvet: meet the people behind Jaja, where our produce comes from and what matters to us.",
+    "teaser.cta": "Read our story",
+
+    "infos.eyebrow": "Find us",
+    "infos.d1": "Monday – Friday",
+    "infos.d2": "Saturday",
+    "infos.d3": "Sunday",
+    "infos.tel": "Phone",
+    "infos.metro": "Metro",
+    "infos.services": "Services",
+    "infos.servicesList": "Terrace · Wi-Fi · Wheelchair access · Dogs welcome · Meal vouchers",
+    "infos.groups": "Groups",
+    "infos.groupsText": "After-work drinks, birthdays, private hire up to 20 guests: give us a call.",
+    "infos.route": "Directions",
+
+    "footer.alcohol": "Please drink responsibly.",
+    "footer.by": "Website by",
+
+    /* Page histoire */
+    "h.title": "Our story",
+    "h.eyebrow": "Brasserie Jaja · Paris 8th",
+    "h.lead": "Jaja is a Parisian brasserie in the true sense: a place you drop into in the morning, come back to at lunch and end the evening in.",
+    "h.p1": "Between Gare Saint-Lazare and Place de Clichy, at 47 rue d'Amsterdam, we wanted a spot that feels like the neighbourhood: lively, unpretentious and generous.",
+    "h.p2": "'Jaja' is old Parisian slang for a glass of wine. It sums us up rather well.",
+    "h.tlEyebrow": "Chapter by chapter",
+    "h.tlTitle": "The Jaja adventure",
+    "h.t1": "The address",
+    "h.t1p": "A classic Haussmann corner on rue d'Amsterdam, with a terrace opening onto a pedestrian street. The kind of place Paris does best.",
+    "h.t2": "The dining room",
+    "h.t2p": "Exposed stone, terrazzo floors, terracotta velvet banquettes, bentwood chairs and a glowing brass bar. Cosy in winter, wide open in summer.",
+    "h.t3": "The kitchen",
+    "h.t3p": "Brasserie classics made in-house from fresh produce: slow-cooked bourguignon, onion soup, hand-cut tartare, and boards to share.",
+    "h.t4": "The terrace",
+    "h.t4p": "From morning coffee to evening drinks, the terrace has become the neighbourhood's meeting point.",
+    "h.t5": "Today",
+    "h.t5p": "Open seven days a week, all-day service, and more than 950 Google reviews averaging 4.4/5. Thank you for being part of it.",
+    "h.vEyebrow": "What matters to us",
+    "h.vTitle": "Our values",
+    "h.v1": "Homemade",
+    "h.v1p": "Sauces, desserts, soups: what can be made here is made here, every day.",
+    "h.v2": "Generous",
+    "h.v2p": "Real portions, fair prices, and a menu that works for breakfast as well as for a late dinner.",
+    "h.v3": "Welcoming",
+    "h.v3p": "Regulars, colleagues, tourists, dogs: everyone has a seat at Jaja.",
+    "h.sEyebrow": "Sourcing",
+    "h.sTitle": "Who we work with",
+    "h.s1": "Cured meats selected from Maison Conquet, Aveyron-based artisan charcutier.",
+    "h.s2": "Chablis and Aligoté from a family estate in Burgundy.",
+    "h.s3": "Organic Côtes du Rhône and Crozes-Hermitage from a historic Rhône house.",
+    "h.s4": "Grower Champagne from the Marne valley, by the glass or by the bottle.",
+    "h.eEyebrow": "The team",
+    "h.eTitle": "The people of Jaja",
+    "h.e1": "Kitchen",
+    "h.e2": "Front of house",
+    "h.e3": "Bar",
+    "h.e4": "Management",
+    "h.ctaTitle": "The best way to get to know us is to come by.",
+    "h.back": "Back to home"
+  },
+
+  /* Textes générés par le script */
+  ui: {
+    fr: {
+      allergens: "Allergènes",
+      noAllergens: "Aucun des 14 allergènes majeurs",
+      empty: "Aucun plat ne correspond à ces filtres dans cette catégorie.",
+      all: "Tout",
+      openNow: "Ouvert en ce moment",
+      closedNow: "Fermé en ce moment",
+      closesAt: "ferme à",
+      opensAt: "ouvre à",
+      a: { gluten: "gluten", crustaces: "crustacés", oeufs: "œufs", poisson: "poisson", arachide: "arachide", soja: "soja", lait: "lait", "fruits-a-coque": "fruits à coque", celeri: "céleri", moutarde: "moutarde", sesame: "sésame", sulfites: "sulfites", lupin: "lupin", mollusques: "mollusques" },
+      diet: { veg: "Végétarien", vegan: "Vegan", gf: "Sans gluten", lf: "Sans lactose" }
+    },
+    en: {
+      allergens: "Allergens",
+      noAllergens: "None of the 14 major allergens",
+      empty: "No dish in this category matches these filters.",
+      all: "All",
+      openNow: "Open now",
+      closedNow: "Closed now",
+      closesAt: "closes at",
+      opensAt: "opens at",
+      a: { gluten: "gluten", crustaces: "crustaceans", oeufs: "eggs", poisson: "fish", arachide: "peanuts", soja: "soy", lait: "milk", "fruits-a-coque": "tree nuts", celeri: "celery", moutarde: "mustard", sesame: "sesame", sulfites: "sulphites", lupin: "lupin", mollusques: "molluscs" },
+      diet: { veg: "Vegetarian", vegan: "Vegan", gf: "Gluten-free", lf: "Dairy-free" }
+    }
+  }
+};

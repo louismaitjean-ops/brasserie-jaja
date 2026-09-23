@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Version de validation : retirer cette ligne et robots.txt à la mise en ligne officielle -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Brasserie Jaja — Bar, brasserie, restaurant · Paris 8e</title>
+  <meta name="description" content="Brasserie Jaja, 47 rue d'Amsterdam, Paris 8e. Entre Saint-Lazare et la place de Clichy : cuisine de brasserie faite maison, terrasse sur rue piétonne, ouvert tous les jours du petit déjeuner jusqu'à 1h.">
+  <link rel="alternate" hreflang="fr" href="index.html">
+  <link rel="alternate" hreflang="en" href="index.html?lang=en">
+  <meta property="og:title" content="Brasserie Jaja — Paris 8e">
+  <meta property="og:description" content="Bar, brasserie, restaurant entre Saint-Lazare et la place de Clichy. Terrasse, cuisine faite maison, ouvert 7j/7.">
+  <meta property="og:image" content="assets/img/salle-bar.jpg">
+  <meta name="theme-color" content="#BD2341">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Brasserie Jaja",
+    "image": "assets/img/salle-bar.jpg",
+    "address": { "@type": "PostalAddress", "streetAddress": "47 rue d'Amsterdam", "postalCode": "75008", "addressLocality": "Paris", "addressCountry": "FR" },
+    "telephone": "+33967408593",
+    "servesCuisine": ["Française", "Brasserie"],
+    "priceRange": "€€",
+    "acceptsReservations": true,
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "954" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "23:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#carte" data-i18n="skip">Aller à la carte</a>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="450" height="195">
+    <img src="assets/img/logo-jaja.png" alt="" class="logo-dark" width="450" height="195" aria-hidden="true">
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+    <a href="#maison" data-i18n="nav.maison">La maison</a>
+    <a href="#carte" data-i18n="nav.carte">La carte</a>
+    <a href="#vins" data-i18n="nav.vins">Les vins</a>
+    <a href="#avis" data-i18n="nav.avis">Avis</a>
+    <a href="histoire.html" data-i18n="nav.histoire">Notre histoire</a>
+    <a href="#infos" data-i18n="nav.infos">Infos</a>
+  </nav>
+  <div class="nav__end">
+    <div class="lang" role="group" aria-label="Langue">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="btn btn--red js-book" type="button" data-i18n="cta.book">Réserver</button>
+    <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span class="sr" data-i18n="nav.menu">Menu</span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero__img" src="assets/img/salle-bar.jpg" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
+    <div class="hero__inner">
+      <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Bar · Brasserie · Restaurant</p>
+      <h1 class="hero__title">
+        <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" width="450" height="195">
+      </h1>
+      <p class="hero__lead" data-i18n="hero.lead">47 rue d'Amsterdam, entre Saint-Lazare et la place de Clichy. Du premier café au dernier verre, tous les jours.</p>
+      <div class="hero__cta">
+        <button class="btn btn--red js-book" type="button" data-i18n="cta.bookTable">Réserver une table</button>
+        <a class="btn btn--ghost" href="#carte" data-i18n="cta.menu">Voir la carte</a>
+      </div>
+    </div>
+    <a class="gbadge" href="#avis" aria-label="Note Google">
+      <svg class="gbadge__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6C12.3 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.4 5.7c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.4 28.8c-.5-1.4-.8-3-.8-4.8s.3-3.3.8-4.8l-7.8-6C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.4 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
+      <span class="gbadge__score js-rating">4,4</span>
+      <span class="stars js-stars" aria-hidden="true"></span>
+      <span class="gbadge__count"><span class="js-count">954</span> <span data-i18n="reviews.word">avis</span></span>
+    </a>
+  </section>
+
+  <!-- LA MAISON -->
+  <section class="maison" id="maison">
+    <div class="wrap maison__grid">
+      <div class="maison__text">
+        <p class="eyebrow" data-i18n="maison.eyebrow">La maison</p>
+        <h2 class="h2" data-i18n="maison.title">Une brasserie de quartier, comme on les aime.</h2>
+        <p data-i18n="maison.p1">Une belle terrasse sur une rue piétonne, une salle cosy l'hiver et grande ouverte l'été, des banquettes en velours et un comptoir où l'on s'attarde volontiers.</p>
+        <p data-i18n="maison.p2">En cuisine, des classiques de brasserie faits maison et des produits frais : bœuf bourguignon, soupe à l'oignon, tartare au couteau, planches à partager. On vient pour un vrai repas ou juste pour un verre entre amis.</p>
+        <ul class="moments">
+          <li><span class="moments__h" data-i18n="maison.m1h">Dès 8h</span><span data-i18n="maison.m1">Café, viennoiseries et œufs brouillés</span></li>
+          <li><span class="moments__h" data-i18n="maison.m2h">Midi &amp; soir</span><span data-i18n="maison.m2">Service continu, cuisine maison</span></li>
+          <li><span class="moments__h" data-i18n="maison.m3h">Jusqu'à 1h</span><span data-i18n="maison.m3">Vins, bières, cocktails en terrasse</span></li>
+        </ul>
+      </div>
+      <figure class="maison__photo maison__photo--a"><img src="assets/img/facade-soir.jpg" alt="La façade et la terrasse de la Brasserie Jaja en soirée" loading="lazy"></figure>
+      <figure class="maison__photo maison__photo--b"><img src="assets/img/bieres-terrasse.jpg" alt="Deux bières en terrasse, le soir" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- INCONTOURNABLES -->
+  <section class="signatures">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-i18n="sig.eyebrow">Les incontournables</p>
+        <h2 class="h2" data-i18n="sig.title">Ce qu'on vient manger ici.</h2>
+      </div>
+      <div class="sig-grid">
+        <figure class="sig"><img src="assets/img/boeuf-bourguignon.jpg" alt="Bœuf bourguignon et écrasé de pommes de terre" loading="lazy"><figcaption><span>Bœuf bourguignon</span><span class="price">23 €</span></figcaption></figure>
+        <figure class="sig"><img src="assets/img/piece-du-boucher.jpg" alt="Pièce du boucher, frites" loading="lazy"><figcaption><span data-i18n="sig.piece">Pièce du boucher</span><span class="price" data-i18n="sig.ardoise">Ardoise</span></figcaption></figure>
+        <figure class="sig"><img src="assets/img/beau-boon.jpg" alt="Salade Beau boon aux nems de légumes" loading="lazy"><figcaption><span>Beau boon</span><span class="price">17 €</span></figcaption></figure>
+        <figure class="sig"><img src="assets/img/soupe-oignon.jpg" alt="Soupe à l'oignon gratinée" loading="lazy"><figcaption><span data-i18n="sig.soupe">Soupe à l'oignon</span><span class="price">12 €</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTE INTERACTIVE -->
+  <section class="carte" id="carte">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="eyebrow" data-i18n="carte.eyebrow">Service continu</p>
+        <h2 class="h2" data-i18n="carte.title">La carte</h2>
+      </div>
+
+      <div class="carte__tabs" role="tablist" id="carteTabs" aria-label="Catégories"></div>
+
+      <div class="carte__filters" id="carteFilters">
+        <span class="carte__filters-label" data-i18n="filters.label">Filtrer :</span>
+        <button type="button" class="chip" data-filter="veg" aria-pressed="false"><span class="diet diet--veg">V</span><span data-i18n="diet.veg">Végétarien</span></button>
+        <button type="button" class="chip" data-filter="vegan" aria-pressed="false"><span class="diet diet--vegan">VG</span><span data-i18n="diet.vegan">Vegan</span></button>
+        <button type="button" class="chip" data-filter="gf" aria-pressed="false"><span class="diet diet--gf">SG</span><span data-i18n="diet.gf">Sans gluten</span></button>
+        <button type="button" class="chip" data-filter="lf" aria-pressed="false"><span class="diet diet--lf">SL</span><span data-i18n="diet.lf">Sans lactose</span></button>
+      </div>
+
+      <div class="carte__board" id="carteBoard" aria-live="polite"></div>
+
+      <p class="carte__legal" data-i18n="carte.legal">Prix nets en euros, service compris. Allergènes donnés à titre indicatif : demandez à notre équipe, elle vous renseignera avec plaisir.</p>
+    </div>
+  </section>
+
+  <!-- VINS -->
+  <section class="vins" id="vins">
+    <div class="wrap">
+      <div class="vins__head">
+        <div>
+          <p class="eyebrow eyebrow--light" data-i18n="vins.eyebrow">À la verse ou à la bouteille</p>
+          <h2 class="h2" data-i18n="vins.title">Les vins</h2>
+        </div>
+        <p class="vins__intro" data-i18n="vins.intro">Des vins de copains servis au verre, et quelques belles bouteilles de Bourgogne, du Rhône et de Bordeaux pour les grandes occasions.</p>
+      </div>
+      <div class="vins__cols" id="vinsList"></div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="galerie" aria-label="Photos">
+    <div class="galerie__grid" id="galerie">
+      <button class="g g--tall" data-src="assets/img/facade-soir.jpg"><img src="assets/img/facade-soir.jpg" alt="Façade en soirée" loading="lazy"></button>
+      <button class="g g--wide" data-src="assets/img/rue-terrasse.jpg"><img src="assets/img/rue-terrasse.jpg" alt="La terrasse côté rue" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-comptoir.jpg"><img src="assets/img/salle-comptoir.jpg" alt="Le comptoir" loading="lazy"></button>
+      <button class="g" data-src="assets/img/oeufs-brouilles.jpg"><img src="assets/img/oeufs-brouilles.jpg" alt="Petit déjeuner, œufs brouillés" loading="lazy"></button>
+      <button class="g g--tall" data-src="assets/img/salle-entree.jpg"><img src="assets/img/salle-entree.jpg" alt="L'entrée de la salle" loading="lazy"></button>
+      <button class="g" data-src="assets/img/bacon-cheeseburger.jpg"><img src="assets/img/bacon-cheeseburger.jpg" alt="Bacon cheeseburger" loading="lazy"></button>
+      <button class="g" data-src="assets/img/terrasse-plats.jpg"><img src="assets/img/terrasse-plats.jpg" alt="Déjeuner en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/dejeuner-terrasse.jpg"><img src="assets/img/dejeuner-terrasse.jpg" alt="Salade en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-miroir.jpg"><img src="assets/img/salle-miroir.jpg" alt="Coin de la salle" loading="lazy"></button>
+    </div>
+  </section>
+
+  <!-- AVIS GOOGLE -->
+  <section class="avis" id="avis">
+    <div class="wrap avis__grid">
+      <div class="avis__score">
+        <p class="eyebrow" data-i18n="avis.eyebrow">Avis Google</p>
+        <p class="avis__big"><span class="js-rating">4,4</span><small>/5</small></p>
+        <span class="stars stars--lg js-stars" aria-hidden="true"></span>
+        <p class="avis__count"><span data-i18n="avis.based">Sur</span> <strong class="js-count">954</strong> <span data-i18n="avis.reviews">avis clients</span></p>
+        <div class="avis__links">
+          <a class="btn btn--red js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.all">Tous les avis</a>
+          <a class="link js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.write">Laisser un avis</a>
+        </div>
+      </div>
+      <div class="avis__list">
+        <div class="avis__track" id="avisTrack"></div>
+        <div class="avis__nav">
+          <button type="button" class="round" id="avisPrev" aria-label="Avis précédent">&larr;</button>
+          <button type="button" class="round" id="avisNext" aria-label="Avis suivant">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTOIRE (teaser) -->
+  <section class="teaser">
+    <img src="assets/img/salle-comptoir.jpg" alt="" loading="lazy" class="teaser__img">
+    <div class="teaser__box">
+      <p class="eyebrow" data-i18n="teaser.eyebrow">Notre histoire</p>
+      <h2 class="h2" data-i18n="teaser.title">Un coin de Paris qui a du caractère.</h2>
+      <p data-i18n="teaser.p">Pierre de taille, zinc, terrazzo et velours : découvrez qui fait vivre le Jaja, d'où viennent nos produits et ce qui nous tient à cœur.</p>
+      <a class="btn btn--dark" href="histoire.html" data-i18n="teaser.cta">Lire notre histoire</a>
+    </div>
+  </section>
+
+  <!-- INFOS -->
+  <section class="infos" id="infos">
+    <div class="wrap infos__grid">
+      <div>
+        <p class="eyebrow" data-i18n="infos.eyebrow">Nous trouver</p>
+        <h2 class="h2">47 rue d'Amsterdam</h2>
+        <p class="infos__addr">75008 Paris</p>
+
+        <dl class="hours">
+          <div><dt data-i18n="infos.d1">Lundi – vendredi</dt><dd>8h – 1h</dd></div>
+          <div><dt data-i18n="infos.d2">Samedi</dt><dd>9h – 1h</dd></div>
+          <div><dt data-i18n="infos.d3">Dimanche</dt><dd>9h – 23h</dd></div>
+        </dl>
+        <p class="infos__open" id="openNow"></p>
+
+        <ul class="infos__list">
+          <li><strong data-i18n="infos.tel">Téléphone</strong><a href="tel:+33967408593">09 67 40 85 93</a></li>
+          <li><strong data-i18n="infos.metro">Métro</strong><span>Liège (13) · Saint-Lazare (3, 12, 13, 14) · Place de Clichy (2, 13)</span></li>
+          <li><strong data-i18n="infos.services">Services</strong><span data-i18n="infos.servicesList">Terrasse · Wi-Fi · Accès fauteuil roulant · Chiens bienvenus · Titres restaurant</span></li>
+          <li><strong data-i18n="infos.groups">Groupes</strong><span data-i18n="infos.groupsText">Afterworks, anniversaires, privatisation jusqu'à 20 personnes : appelez-nous.</span></li>
+        </ul>
+        <div class="infos__cta">
+          <button class="btn btn--red js-book" type="button" data-i18n="cta.bookTable">Réserver une table</button>
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" data-i18n="infos.route">Itinéraire</a>
+        </div>
+      </div>
+      <div class="infos__map">
+        <iframe title="Plan d'accès Brasserie Jaja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Brasserie%20Jaja%2C%2047%20rue%20d%27Amsterdam%2C%2075008%20Paris&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="footer__logo" width="450" height="195" loading="lazy">
+    <div>
+      <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
+      <p><a href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener">Instagram @brasseriejaja</a></p>
+    </div>
+    <div class="footer__small">
+      <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
+      <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox__close" aria-label="Fermer">&times;</button>
+  <div class="lightbox__media" id="lightboxMedia"></div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/carte.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js?v=8"></script>
+</body>
+</html>
