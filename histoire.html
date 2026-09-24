@@ -7,21 +7,45 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Notre histoire — Brasserie Jaja, Paris 8e</title>
   <meta name="description" content="L'histoire de la Brasserie Jaja, 47 rue d'Amsterdam : la salle, la cuisine maison, nos valeurs, nos producteurs et l'équipe.">
-  <link rel="alternate" hreflang="fr" href="histoire.html">
-  <link rel="alternate" hreflang="en" href="histoire.html?lang=en">
-  <meta name="theme-color" content="#BD2341">
+  <link rel="alternate" hreflang="fr" href="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html">
+  <link rel="alternate" hreflang="en" href="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html?lang=en">
+  <link rel="canonical" href="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Brasserie Jaja">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html">
+  <meta property="og:title" content="Notre histoire — Brasserie Jaja">
+  <meta property="og:description" content="La salle, la cuisine maison, nos valeurs, nos producteurs et l'équipe de la Brasserie Jaja.">
+  <meta property="og:image" content="https://louismaitjean-ops.github.io/brasserie-jaja/assets/img/salle-bar.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="700">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F3D9A8">
   <link rel="icon" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/caslon-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/caslon-text-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion");
+    // Au rechargement : toujours revenir en haut de la page (et oublier l'ancre #section)
+    if("scrollRestoration" in history)history.scrollRestoration="manual";
+    (function(){var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];
+      if(n&&n.type==="reload"){
+        if(location.hash)history.replaceState(null,"",location.pathname+location.search);
+        var top=function(){window.scrollTo(0,0);};
+        top();document.addEventListener("DOMContentLoaded",top);
+        window.addEventListener("load",function(){top();setTimeout(top,0);});
+      }})();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css?v=21">
 </head>
 <body>
 
 <header class="nav" id="nav">
   <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
-    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="450" height="195">
-    <img src="assets/img/logo-jaja.png" alt="" class="logo-dark" width="450" height="195" aria-hidden="true">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="455" height="200">
+    <img src="assets/img/logo-jaja-ink.png" alt="" class="logo-dark" width="455" height="200" aria-hidden="true">
   </a>
   <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
     <a href="index.html#maison" data-i18n="nav.maison">La maison</a>
@@ -43,7 +67,7 @@
 
 <main>
   <section class="page-hero">
-    <img src="assets/img/rue-terrasse.jpg" alt="La Brasserie Jaja à l'angle de la rue d'Amsterdam" fetchpriority="high">
+    <img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="100vw" src="assets/img/rue-terrasse.webp" alt="La Brasserie Jaja à l'angle de la rue d'Amsterdam" fetchpriority="high">
     <div class="wrap">
       <p class="eyebrow eyebrow--light" data-i18n="h.eyebrow">Brasserie Jaja · Paris 8e</p>
       <h1 data-i18n="h.title">Notre histoire</h1>
@@ -60,6 +84,19 @@
     </div>
   </section>
 
+  <div class="band" aria-hidden="true">
+    <div class="band__row band__row--a" data-dir="-1">
+      <div class="band__set">
+        <span data-i18n="band.1">Brasserie</span><span class="o" data-i18n="band.2">Terrasse</span><span data-i18n="band.3">Service continu</span><span class="o">Paris 8e</span>
+      </div>
+    </div>
+    <div class="band__row band__row--b" data-dir="1">
+      <div class="band__set">
+        <span data-i18n="band.4">Du premier café au dernier verre</span><span data-i18n="band.5">47 rue d'Amsterdam</span><span data-i18n="band.6">Ouvert 7 jours sur 7</span>
+      </div>
+    </div>
+  </div>
+
   <section class="timeline">
     <div class="wrap">
       <div class="section-head section-head--center">
@@ -68,23 +105,23 @@
       </div>
       <ol>
         <li class="tl">
-          <figure><img src="assets/img/facade-soir.jpg" alt="La façade de la brasserie" loading="lazy"></figure>
+          <figure><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 700px) 90vw, 40vw" src="assets/img/facade-soir.webp" alt="La façade de la brasserie" loading="lazy"></figure>
           <div><span class="tl__num">I</span><h3 data-i18n="h.t1">L'adresse</h3><p data-i18n="h.t1p">Un angle haussmannien de la rue d'Amsterdam, avec une terrasse qui s'ouvre sur une rue piétonne. Le genre d'endroit que Paris fait mieux que personne.</p></div>
         </li>
         <li class="tl">
-          <figure><img src="assets/img/salle-bar.jpg" alt="La salle et le bar" loading="lazy"></figure>
+          <figure><img width="1400" height="700" srcset="assets/img/salle-bar-400.webp 400w, assets/img/salle-bar-800.webp 800w, assets/img/salle-bar.webp 1400w" sizes="(max-width: 700px) 90vw, 40vw" src="assets/img/salle-bar.webp" alt="La salle et le bar" loading="lazy"></figure>
           <div><span class="tl__num">II</span><h3 data-i18n="h.t2">La salle</h3><p data-i18n="h.t2p">Pierre apparente, sol en terrazzo, banquettes en velours terracotta, chaises bistrot et un bar en laiton qui s'allume à la tombée du jour. Cosy l'hiver, grande ouverte l'été.</p></div>
         </li>
         <li class="tl">
-          <figure><img src="assets/img/boeuf-bourguignon.jpg" alt="Bœuf bourguignon maison" loading="lazy"></figure>
+          <figure><img width="1200" height="1600" srcset="assets/img/boeuf-bourguignon-400.webp 400w, assets/img/boeuf-bourguignon-800.webp 800w, assets/img/boeuf-bourguignon.webp 1200w" sizes="(max-width: 700px) 90vw, 40vw" src="assets/img/boeuf-bourguignon.webp" alt="Bœuf bourguignon maison" loading="lazy"></figure>
           <div><span class="tl__num">III</span><h3 data-i18n="h.t3">La cuisine</h3><p data-i18n="h.t3p">Des classiques de brasserie faits maison avec des produits frais : bourguignon mijoté, soupe à l'oignon, tartare au couteau et planches à partager.</p></div>
         </li>
         <li class="tl">
-          <figure><img src="assets/img/terrasse-plats.jpg" alt="Déjeuner en terrasse" loading="lazy"></figure>
+          <figure><img width="1200" height="1600" srcset="assets/img/terrasse-plats-400.webp 400w, assets/img/terrasse-plats-800.webp 800w, assets/img/terrasse-plats.webp 1200w" sizes="(max-width: 700px) 90vw, 40vw" src="assets/img/terrasse-plats.webp" alt="Déjeuner en terrasse" loading="lazy"></figure>
           <div><span class="tl__num">IV</span><h3 data-i18n="h.t4">La terrasse</h3><p data-i18n="h.t4p">Du café du matin à l'apéro du soir, la terrasse est devenue le point de rendez-vous du quartier.</p></div>
         </li>
         <li class="tl">
-          <figure><img src="assets/img/bieres-terrasse.jpg" alt="Un verre en terrasse le soir" loading="lazy"></figure>
+          <figure><img width="1200" height="1600" srcset="assets/img/bieres-terrasse-400.webp 400w, assets/img/bieres-terrasse-800.webp 800w, assets/img/bieres-terrasse.webp 1200w" sizes="(max-width: 700px) 90vw, 40vw" src="assets/img/bieres-terrasse.webp" alt="Un verre en terrasse le soir" loading="lazy"></figure>
           <div><span class="tl__num">V</span><h3 data-i18n="h.t5">Aujourd'hui</h3><p data-i18n="h.t5p">Ouverts 7 jours sur 7, en service continu, et plus de 950 avis Google pour une moyenne de 4,4/5. Merci d'en faire partie.</p></div>
         </li>
       </ol>
@@ -128,10 +165,10 @@
       </div>
       <!-- Remplacer photos et prénoms par ceux de l'équipe -->
       <div class="equipe__grid">
-        <figure class="membre"><div class="membre__photo"><img src="assets/img/soupe-oignon.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e1">En cuisine</span></figcaption></figure>
-        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-entree.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e2">En salle</span></figcaption></figure>
-        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-comptoir.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e3">Au bar</span></figcaption></figure>
-        <figure class="membre"><div class="membre__photo"><img src="assets/img/salle-miroir.jpg" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e4">Direction</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img width="1200" height="1600" srcset="assets/img/soupe-oignon-400.webp 400w, assets/img/soupe-oignon-800.webp 800w, assets/img/soupe-oignon.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/soupe-oignon.webp" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e1">En cuisine</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img width="1200" height="1600" srcset="assets/img/salle-entree-400.webp 400w, assets/img/salle-entree-800.webp 800w, assets/img/salle-entree.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/salle-entree.webp" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e2">En salle</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img width="1200" height="1600" srcset="assets/img/salle-comptoir-400.webp 400w, assets/img/salle-comptoir-800.webp 800w, assets/img/salle-comptoir.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/salle-comptoir.webp" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e3">Au bar</span></figcaption></figure>
+        <figure class="membre"><div class="membre__photo"><img width="1200" height="1600" srcset="assets/img/salle-miroir-400.webp 400w, assets/img/salle-miroir-800.webp 800w, assets/img/salle-miroir.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/salle-miroir.webp" alt="" loading="lazy"></div><figcaption><strong>Prénom</strong><span data-i18n="h.e4">Direction</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -149,21 +186,23 @@
 
 <footer class="footer">
   <div class="wrap footer__grid">
-    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="footer__logo" width="450" height="195" loading="lazy">
+    <img src="assets/img/logo-jaja-sand.png" alt="Brasserie Jaja" class="footer__logo" width="455" height="200" loading="lazy">
     <div>
       <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
       <p><a href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener">Instagram @brasseriejaja</a></p>
     </div>
     <div class="footer__small">
       <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
+      <p><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a></p>
       <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
     </div>
   </div>
 </footer>
 
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/main.js?v=8"></script>
+<script src="assets/js/config.js?v=21"></script>
+<script src="assets/js/i18n.js?v=21"></script>
+<script src="assets/js/motion.js?v=21"></script>
+<script src="assets/js/main.js?v=21"></script>
 </body>
 </html>

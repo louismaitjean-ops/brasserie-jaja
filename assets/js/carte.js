@@ -22,7 +22,7 @@ window.CARTE = [
       { name: "Œufs mimosa", desc: { fr: "Herbes fraîches", en: "Devilled eggs, fresh herbs" }, price: 7.5, diet: ["veg", "gf", "lf"], allergens: ["oeufs", "moutarde"] },
       { name: "Velouté potimarron", desc: { fr: "De saison", en: "Red kuri squash velouté" }, price: 10, diet: ["veg", "gf"], allergens: ["lait", "celeri"] },
       { name: "Terrine de campagne", desc: { fr: "Cornichons, pain grillé", en: "Country-style pâté, pickles, toast" }, price: 9.5, diet: ["lf"], allergens: ["gluten", "oeufs", "sulfites"] },
-      { name: "Soupe à l'oignon", desc: { fr: "Baguette gratinée au comté", en: "French onion soup, comté-gratinated baguette" }, price: 12, diet: [], allergens: ["gluten", "lait", "celeri"], img: "soupe-oignon.jpg" },
+      { name: "Soupe à l'oignon", desc: { fr: "Baguette gratinée au comté", en: "French onion soup, comté-gratinated baguette" }, price: 12, diet: [], allergens: ["gluten", "lait", "celeri"], img: "soupe-oignon.webp" },
       { name: "Nems aux légumes", desc: { fr: "Sucrine, menthe", en: "Vegetable spring rolls, lettuce, mint" }, price: 11, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "soja"] }
     ]
   },
@@ -30,10 +30,10 @@ window.CARTE = [
     id: "salades",
     title: { fr: "Salades & toasts", en: "Salads & toasts" },
     items: [
-      { name: "Beau boon", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.jpg" },
+      { name: "Beau boon", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.webp" },
       { name: "Salade chèvre chaud", desc: { fr: "Salade mixte, tomates cerises, poitrine fumée, brick chèvre miel, noix", en: "Mixed leaves, cherry tomatoes, smoked bacon, goat's cheese & honey brick, walnuts" }, price: 18, diet: [], allergens: ["gluten", "lait", "fruits-a-coque"] },
       { name: "Salade césar", desc: { fr: "Salade romaine, parmesan, croûtons, poulet croustillant, œuf mollet, sauce césar", en: "Romaine, parmesan, croutons, crispy chicken, soft-boiled egg, Caesar dressing" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs", "poisson", "moutarde"] },
-      { name: "Avocado toast", desc: { fr: "Purée d'avocat, œufs mollets, feta, salade verte, grenade", en: "Smashed avocado, soft-boiled eggs, feta, green salad, pomegranate" }, price: 19, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "dejeuner-terrasse.jpg" }
+      { name: "Avocado toast", desc: { fr: "Purée d'avocat, œufs mollets, feta, salade verte, grenade", en: "Smashed avocado, soft-boiled eggs, feta, green salad, pomegranate" }, price: 19, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "dejeuner-terrasse.webp" }
     ]
   },
   {
@@ -51,17 +51,17 @@ window.CARTE = [
       { name: "Planche de charcuterie", desc: { fr: "Maison Conquet", en: "Cured meats from Maison Conquet" }, price: 22, diet: ["lf"], allergens: ["gluten", "sulfites"] },
       { name: "Planche de fromages", desc: { fr: "Sélection du moment", en: "Cheese board" }, price: 22, diet: ["veg"], allergens: ["lait", "gluten"] },
       { name: "Planche végétarienne", desc: { fr: "Caviar d'aubergines, houmous, guacamole", en: "Aubergine dip, hummus, guacamole" }, price: 22, diet: ["veg", "vegan", "lf"], allergens: ["sesame", "gluten"] },
-      { name: "Planche mixte", desc: { fr: "Charcuterie & fromages", en: "Cured meats & cheese" }, price: 24, diet: [], allergens: ["lait", "gluten", "sulfites"], img: "planche-cafe.jpg" }
+      { name: "Planche mixte", desc: { fr: "Charcuterie & fromages", en: "Cured meats & cheese" }, price: 24, diet: [], allergens: ["lait", "gluten", "sulfites"], img: "planche-cafe.webp" }
     ]
   },
   {
     id: "plats",
     title: { fr: "Plats", en: "Mains" },
     items: [
-      { name: "Pièce du boucher", desc: { fr: "Voir l'ardoise du jour", en: "Butcher's cut — see today's board" }, price: null, priceLabel: { fr: "Ardoise", en: "See board" }, diet: ["gf", "lf"], allergens: [], img: "piece-du-boucher.jpg" },
-      { name: "Bœuf bourguignon", desc: { fr: "Écrasé de pommes de terre", en: "Beef bourguignon, crushed potatoes" }, price: 23, diet: [], allergens: ["lait", "sulfites", "celeri", "gluten"], img: "boeuf-bourguignon.jpg" },
+      { name: "Pièce du boucher", desc: { fr: "Voir l'ardoise du jour", en: "Butcher's cut — see today's board" }, price: null, priceLabel: { fr: "Ardoise", en: "See board" }, diet: ["gf", "lf"], allergens: [], img: "piece-du-boucher.webp" },
+      { name: "Bœuf bourguignon", desc: { fr: "Écrasé de pommes de terre", en: "Beef bourguignon, crushed potatoes" }, price: 23, diet: [], allergens: ["lait", "sulfites", "celeri", "gluten"], img: "boeuf-bourguignon.webp" },
       { name: "Tartare de bœuf au couteau", desc: { fr: "Préparé, frites", en: "Hand-cut beef tartare, fries" }, price: 22, diet: ["gf", "lf"], allergens: ["oeufs", "moutarde"] },
-      { name: "Bacon cheeseburger", desc: { fr: "Bacon, cheddar, chutney d'oignons, tomate, salade, pickles, frites", en: "Bacon, cheddar, onion chutney, tomato, lettuce, pickles, fries" }, price: 19.5, diet: [], allergens: ["gluten", "lait", "moutarde", "sesame"], img: "bacon-cheeseburger.jpg" },
+      { name: "Bacon cheeseburger", desc: { fr: "Bacon, cheddar, chutney d'oignons, tomate, salade, pickles, frites", en: "Bacon, cheddar, onion chutney, tomato, lettuce, pickles, fries" }, price: 19.5, diet: [], allergens: ["gluten", "lait", "moutarde", "sesame"], img: "bacon-cheeseburger.webp" },
       { name: "Coquillettes truffées", desc: { fr: "Jambon, comté 12 mois", en: "Truffle pasta, ham, 12-month comté" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs"] },
       { name: "Rigatoni à la tomate", desc: { fr: "Parmesan, basilic", en: "Tomato rigatoni, parmesan, basil" }, price: 17.5, diet: ["veg"], allergens: ["gluten", "lait"] },
       { name: "Milanaise de veau", desc: { fr: "Rigatoni tomates, parmesan, basilic", en: "Veal Milanese, tomato rigatoni, parmesan, basil" }, price: 24, diet: [], allergens: ["gluten", "oeufs", "lait"] },
@@ -91,7 +91,7 @@ window.CARTE = [
     note: { fr: "Servi dès l'ouverture. Supp. cappuccino ou chocolat chaud 2 €, crème 1,50 €, lait végétal 1 €.", en: "Served from opening time. Cappuccino or hot chocolate +€2, cream +€1.50, plant milk +€1." },
     items: [
       { name: "Formule rapide", desc: { fr: "Boisson chaude, viennoiserie, jus pressé ou nectar", en: "Hot drink, pastry, fresh juice or nectar" }, price: 10, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"] },
-      { name: "Formule moins rapide", desc: { fr: "Boisson chaude, œufs brouillés, fromage blanc muesli fruits rouges ou avocado toast, jus pressé ou nectar", en: "Hot drink, scrambled eggs, fromage blanc with muesli & berries or avocado toast, fresh juice or nectar" }, price: 16, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "oeufs-brouilles.jpg" },
+      { name: "Formule moins rapide", desc: { fr: "Boisson chaude, œufs brouillés, fromage blanc muesli fruits rouges ou avocado toast, jus pressé ou nectar", en: "Hot drink, scrambled eggs, fromage blanc with muesli & berries or avocado toast, fresh juice or nectar" }, price: 16, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "oeufs-brouilles.webp" },
       { name: "Viennoiserie", desc: { fr: "Croissant ou pain au chocolat", en: "Croissant or pain au chocolat" }, price: 3, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"] },
       { name: "Œufs brouillés nature", desc: { fr: "Supp. bacon 4 €", en: "Plain scrambled eggs — add bacon €4" }, price: 10, diet: ["veg", "gf"], allergens: ["oeufs", "lait"] },
       { name: "Fromage blanc", desc: { fr: "Muesli, fruits rouges", en: "Fromage blanc, muesli, red berries" }, price: 9, diet: ["veg"], allergens: ["lait", "gluten", "fruits-a-coque"] },

@@ -1,2 +1,8 @@
+# VERSION DE VALIDATION : le site est caché des moteurs de recherche.
+# À la mise en ligne officielle, remplacer tout ce fichier par :
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://www.brasseriejaja.fr/sitemap.xml
+# et retirer la balise <meta name="robots" content="noindex, nofollow"> des pages.
 User-agent: *
 Disallow: /

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://louismaitjean-ops.github.io/brasserie-jaja/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://louismaitjean-ops.github.io/brasserie-jaja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://louismaitjean-ops.github.io/brasserie-jaja/?lang=en"/>
+    <lastmod>2026-09-24</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html?lang=en"/>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://louismaitjean-ops.github.io/brasserie-jaja/mentions-legales.html</loc><lastmod>2026-09-24</lastmod><priority>0.2</priority></url>
+  <url><loc>https://louismaitjean-ops.github.io/brasserie-jaja/confidentialite.html</loc><lastmod>2026-09-24</lastmod><priority>0.2</priority></url>
+</urlset>

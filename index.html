@@ -7,23 +7,45 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Brasserie Jaja — Bar, brasserie, restaurant · Paris 8e</title>
   <meta name="description" content="Brasserie Jaja, 47 rue d'Amsterdam, Paris 8e. Entre Saint-Lazare et la place de Clichy : cuisine de brasserie faite maison, terrasse sur rue piétonne, ouvert tous les jours du petit déjeuner jusqu'à 1h.">
-  <link rel="alternate" hreflang="fr" href="index.html">
-  <link rel="alternate" hreflang="en" href="index.html?lang=en">
+  <link rel="alternate" hreflang="fr" href="https://louismaitjean-ops.github.io/brasserie-jaja/">
+  <link rel="alternate" hreflang="en" href="https://louismaitjean-ops.github.io/brasserie-jaja/?lang=en">
+  <link rel="canonical" href="https://louismaitjean-ops.github.io/brasserie-jaja/">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Brasserie Jaja">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://louismaitjean-ops.github.io/brasserie-jaja/">
   <meta property="og:title" content="Brasserie Jaja — Paris 8e">
   <meta property="og:description" content="Bar, brasserie, restaurant entre Saint-Lazare et la place de Clichy. Terrasse, cuisine faite maison, ouvert 7j/7.">
-  <meta property="og:image" content="assets/img/salle-bar.jpg">
-  <meta name="theme-color" content="#BD2341">
+  <meta property="og:image" content="https://louismaitjean-ops.github.io/brasserie-jaja/assets/img/salle-bar.jpg">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="700">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F3D9A8">
   <link rel="icon" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/caslon-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/caslon-text-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion");
+    // Au rechargement : toujours revenir en haut de la page (et oublier l'ancre #section)
+    if("scrollRestoration" in history)history.scrollRestoration="manual";
+    (function(){var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];
+      if(n&&n.type==="reload"){
+        if(location.hash)history.replaceState(null,"",location.pathname+location.search);
+        var top=function(){window.scrollTo(0,0);};
+        top();document.addEventListener("DOMContentLoaded",top);
+        window.addEventListener("load",function(){top();setTimeout(top,0);});
+      }})();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css?v=21">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Brasserie Jaja",
-    "image": "assets/img/salle-bar.jpg",
+    "image": "https://louismaitjean-ops.github.io/brasserie-jaja/assets/img/salle-bar.jpg",
+    "url": "https://louismaitjean-ops.github.io/brasserie-jaja/",
     "address": { "@type": "PostalAddress", "streetAddress": "47 rue d'Amsterdam", "postalCode": "75008", "addressLocality": "Paris", "addressCountry": "FR" },
     "telephone": "+33967408593",
     "servesCuisine": ["Française", "Brasserie"],
@@ -44,8 +66,8 @@
 
 <header class="nav" id="nav">
   <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
-    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="450" height="195">
-    <img src="assets/img/logo-jaja.png" alt="" class="logo-dark" width="450" height="195" aria-hidden="true">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="455" height="200">
+    <img src="assets/img/logo-jaja-ink.png" alt="" class="logo-dark" width="455" height="200" aria-hidden="true">
   </a>
   <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
     <a href="#maison" data-i18n="nav.maison">La maison</a>
@@ -69,19 +91,19 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img class="hero__img" src="assets/img/salle-bar.jpg" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
+    <img width="1400" height="700" class="hero__img" srcset="assets/img/salle-bar-400.webp 400w, assets/img/salle-bar-800.webp 800w, assets/img/salle-bar.webp 1400w" sizes="100vw" src="assets/img/salle-bar.webp" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
     <div class="hero__inner">
       <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Bar · Brasserie · Restaurant</p>
       <h1 class="hero__title">
-        <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" width="450" height="195">
+        <img src="assets/img/logo-jaja-ink.png" alt="Brasserie Jaja" width="455" height="200">
       </h1>
-      <p class="hero__lead" data-i18n="hero.lead">47 rue d'Amsterdam, entre Saint-Lazare et la place de Clichy. Du premier café au dernier verre, tous les jours.</p>
+      <p class="hero__lead" data-i18n="hero.lead">Du premier café au dernier verre, tous les jours.</p>
       <div class="hero__cta">
-        <button class="btn btn--red js-book" type="button" data-i18n="cta.bookTable">Réserver une table</button>
         <a class="btn btn--ghost" href="#carte" data-i18n="cta.menu">Voir la carte</a>
       </div>
     </div>
-    <a class="gbadge" href="#avis" aria-label="Note Google">
+    <a class="hero__scroll" href="#maison" aria-label="Découvrir"><span></span></a>
+    <a class="gbadge" href="#avis">
       <svg class="gbadge__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6C12.3 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.4 5.7c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.4 28.8c-.5-1.4-.8-3-.8-4.8s.3-3.3.8-4.8l-7.8-6C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.4 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
       <span class="gbadge__score js-rating">4,4</span>
       <span class="stars js-stars" aria-hidden="true"></span>
@@ -89,12 +111,35 @@
     </a>
   </section>
 
+  <!-- ACCÈS RAPIDES (mobile) -->
+  <nav class="quick" aria-label="Accès rapide">
+    <p class="quick__status"><span class="quick__open" id="openNowTop"></span><a href="#avis" class="quick__rating"><span class="js-rating">4,4</span> <span class="stars js-stars" aria-hidden="true"></span> <span class="quick__google">Google</span></a></p>
+    <div class="quick__grid">
+      <a class="quick__item quick__item--main" href="#carte">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z M15 3v3h3 M9 10h6 M9 13.5h6 M9 17h4"/></svg>
+        <span data-i18n="quick.menu">La carte</span>
+      </a>
+      <a class="quick__item" href="tel:+33967408593">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span data-i18n="quick.call">Appeler</span>
+      </a>
+      <a class="quick__item" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></svg>
+        <span data-i18n="quick.route">Itinéraire</span>
+      </a>
+      <a class="quick__item" href="#infos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M12 7v5l3 2"/></svg>
+        <span data-i18n="quick.hours">Horaires</span>
+      </a>
+    </div>
+  </nav>
+
   <!-- LA MAISON -->
   <section class="maison" id="maison">
     <div class="wrap maison__grid">
       <div class="maison__text">
         <p class="eyebrow" data-i18n="maison.eyebrow">La maison</p>
-        <h2 class="h2" data-i18n="maison.title">Une brasserie de quartier, comme on les aime.</h2>
+        <h2 class="h2" data-i18n="maison.title">Un zinc, une terrasse, et tout le quartier autour.</h2>
         <p data-i18n="maison.p1">Une belle terrasse sur une rue piétonne, une salle cosy l'hiver et grande ouverte l'été, des banquettes en velours et un comptoir où l'on s'attarde volontiers.</p>
         <p data-i18n="maison.p2">En cuisine, des classiques de brasserie faits maison et des produits frais : bœuf bourguignon, soupe à l'oignon, tartare au couteau, planches à partager. On vient pour un vrai repas ou juste pour un verre entre amis.</p>
         <ul class="moments">
@@ -103,8 +148,8 @@
           <li><span class="moments__h" data-i18n="maison.m3h">Jusqu'à 1h</span><span data-i18n="maison.m3">Vins, bières, cocktails en terrasse</span></li>
         </ul>
       </div>
-      <figure class="maison__photo maison__photo--a"><img src="assets/img/facade-soir.jpg" alt="La façade et la terrasse de la Brasserie Jaja en soirée" loading="lazy"></figure>
-      <figure class="maison__photo maison__photo--b"><img src="assets/img/bieres-terrasse.jpg" alt="Deux bières en terrasse, le soir" loading="lazy"></figure>
+      <figure class="maison__photo maison__photo--a"><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 900px) 46vw, 26vw" src="assets/img/facade-soir.webp" alt="La façade et la terrasse de la Brasserie Jaja en soirée" loading="lazy"></figure>
+      <figure class="maison__photo maison__photo--b"><img width="1200" height="1600" srcset="assets/img/bieres-terrasse-400.webp 400w, assets/img/bieres-terrasse-800.webp 800w, assets/img/bieres-terrasse.webp 1200w" sizes="(max-width: 900px) 46vw, 26vw" src="assets/img/bieres-terrasse.webp" alt="Deux bières en terrasse, le soir" loading="lazy"></figure>
     </div>
   </section>
 
@@ -116,13 +161,26 @@
         <h2 class="h2" data-i18n="sig.title">Ce qu'on vient manger ici.</h2>
       </div>
       <div class="sig-grid">
-        <figure class="sig"><img src="assets/img/boeuf-bourguignon.jpg" alt="Bœuf bourguignon et écrasé de pommes de terre" loading="lazy"><figcaption><span>Bœuf bourguignon</span><span class="price">23 €</span></figcaption></figure>
-        <figure class="sig"><img src="assets/img/piece-du-boucher.jpg" alt="Pièce du boucher, frites" loading="lazy"><figcaption><span data-i18n="sig.piece">Pièce du boucher</span><span class="price" data-i18n="sig.ardoise">Ardoise</span></figcaption></figure>
-        <figure class="sig"><img src="assets/img/beau-boon.jpg" alt="Salade Beau boon aux nems de légumes" loading="lazy"><figcaption><span>Beau boon</span><span class="price">17 €</span></figcaption></figure>
-        <figure class="sig"><img src="assets/img/soupe-oignon.jpg" alt="Soupe à l'oignon gratinée" loading="lazy"><figcaption><span data-i18n="sig.soupe">Soupe à l'oignon</span><span class="price">12 €</span></figcaption></figure>
+        <figure class="sig"><img width="1200" height="1600" srcset="assets/img/boeuf-bourguignon-400.webp 400w, assets/img/boeuf-bourguignon-800.webp 800w, assets/img/boeuf-bourguignon.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/boeuf-bourguignon.webp" alt="Bœuf bourguignon et écrasé de pommes de terre" loading="lazy"><figcaption><span>Bœuf bourguignon</span><span class="price">23 €</span></figcaption></figure>
+        <figure class="sig"><img width="1200" height="1600" srcset="assets/img/piece-du-boucher-400.webp 400w, assets/img/piece-du-boucher-800.webp 800w, assets/img/piece-du-boucher.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/piece-du-boucher.webp" alt="Pièce du boucher, frites" loading="lazy"><figcaption><span data-i18n="sig.piece">Pièce du boucher</span><span class="price" data-i18n="sig.ardoise">Ardoise</span></figcaption></figure>
+        <figure class="sig"><img width="1200" height="1600" srcset="assets/img/beau-boon-400.webp 400w, assets/img/beau-boon-800.webp 800w, assets/img/beau-boon.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/beau-boon.webp" alt="Salade Beau boon aux nems de légumes" loading="lazy"><figcaption><span>Beau boon</span><span class="price">17 €</span></figcaption></figure>
+        <figure class="sig"><img width="1200" height="1600" srcset="assets/img/soupe-oignon-400.webp 400w, assets/img/soupe-oignon-800.webp 800w, assets/img/soupe-oignon.webp 1200w" sizes="(max-width: 900px) 46vw, 24vw" src="assets/img/soupe-oignon.webp" alt="Soupe à l'oignon gratinée" loading="lazy"><figcaption><span data-i18n="sig.soupe">Soupe à l'oignon</span><span class="price">12 €</span></figcaption></figure>
       </div>
     </div>
   </section>
+
+  <div class="band" aria-hidden="true">
+    <div class="band__row band__row--a" data-dir="-1">
+      <div class="band__set">
+        <span data-i18n="band.1">Brasserie</span><span class="o" data-i18n="band.2">Terrasse</span><span data-i18n="band.3">Service continu</span><span class="o">Paris 8e</span>
+      </div>
+    </div>
+    <div class="band__row band__row--b" data-dir="1">
+      <div class="band__set">
+        <span data-i18n="band.4">Du premier café au dernier verre</span><span data-i18n="band.5">47 rue d'Amsterdam</span><span data-i18n="band.6">Ouvert 7 jours sur 7</span>
+      </div>
+    </div>
+  </div>
 
   <!-- CARTE INTERACTIVE -->
   <section class="carte" id="carte">
@@ -159,21 +217,22 @@
         <p class="vins__intro" data-i18n="vins.intro">Des vins de copains servis au verre, et quelques belles bouteilles de Bourgogne, du Rhône et de Bordeaux pour les grandes occasions.</p>
       </div>
       <div class="vins__cols" id="vinsList"></div>
+      <button type="button" class="btn btn--line vins__more" data-i18n="vins.more">Voir toute la carte des vins</button>
     </div>
   </section>
 
   <!-- GALERIE -->
   <section class="galerie" aria-label="Photos">
     <div class="galerie__grid" id="galerie">
-      <button class="g g--tall" data-src="assets/img/facade-soir.jpg"><img src="assets/img/facade-soir.jpg" alt="Façade en soirée" loading="lazy"></button>
-      <button class="g g--wide" data-src="assets/img/rue-terrasse.jpg"><img src="assets/img/rue-terrasse.jpg" alt="La terrasse côté rue" loading="lazy"></button>
-      <button class="g" data-src="assets/img/salle-comptoir.jpg"><img src="assets/img/salle-comptoir.jpg" alt="Le comptoir" loading="lazy"></button>
-      <button class="g" data-src="assets/img/oeufs-brouilles.jpg"><img src="assets/img/oeufs-brouilles.jpg" alt="Petit déjeuner, œufs brouillés" loading="lazy"></button>
-      <button class="g g--tall" data-src="assets/img/salle-entree.jpg"><img src="assets/img/salle-entree.jpg" alt="L'entrée de la salle" loading="lazy"></button>
-      <button class="g" data-src="assets/img/bacon-cheeseburger.jpg"><img src="assets/img/bacon-cheeseburger.jpg" alt="Bacon cheeseburger" loading="lazy"></button>
-      <button class="g" data-src="assets/img/terrasse-plats.jpg"><img src="assets/img/terrasse-plats.jpg" alt="Déjeuner en terrasse" loading="lazy"></button>
-      <button class="g" data-src="assets/img/dejeuner-terrasse.jpg"><img src="assets/img/dejeuner-terrasse.jpg" alt="Salade en terrasse" loading="lazy"></button>
-      <button class="g" data-src="assets/img/salle-miroir.jpg"><img src="assets/img/salle-miroir.jpg" alt="Coin de la salle" loading="lazy"></button>
+      <button class="g g--tall" data-src="assets/img/facade-soir.webp"><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/facade-soir.webp" alt="Façade en soirée" loading="lazy"></button>
+      <button class="g g--wide" data-src="assets/img/rue-terrasse.webp"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/rue-terrasse.webp" alt="La terrasse côté rue" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-comptoir.webp"><img width="1200" height="1600" srcset="assets/img/salle-comptoir-400.webp 400w, assets/img/salle-comptoir-800.webp 800w, assets/img/salle-comptoir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-comptoir.webp" alt="Le comptoir" loading="lazy"></button>
+      <button class="g" data-src="assets/img/oeufs-brouilles.webp"><img width="1200" height="1600" srcset="assets/img/oeufs-brouilles-400.webp 400w, assets/img/oeufs-brouilles-800.webp 800w, assets/img/oeufs-brouilles.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/oeufs-brouilles.webp" alt="Petit déjeuner, œufs brouillés" loading="lazy"></button>
+      <button class="g g--tall" data-src="assets/img/salle-entree.webp"><img width="1200" height="1600" srcset="assets/img/salle-entree-400.webp 400w, assets/img/salle-entree-800.webp 800w, assets/img/salle-entree.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-entree.webp" alt="L'entrée de la salle" loading="lazy"></button>
+      <button class="g" data-src="assets/img/bacon-cheeseburger.webp"><img width="1200" height="1600" srcset="assets/img/bacon-cheeseburger-400.webp 400w, assets/img/bacon-cheeseburger-800.webp 800w, assets/img/bacon-cheeseburger.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/bacon-cheeseburger.webp" alt="Bacon cheeseburger" loading="lazy"></button>
+      <button class="g" data-src="assets/img/terrasse-plats.webp"><img width="1200" height="1600" srcset="assets/img/terrasse-plats-400.webp 400w, assets/img/terrasse-plats-800.webp 800w, assets/img/terrasse-plats.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/terrasse-plats.webp" alt="Déjeuner en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/dejeuner-terrasse.webp"><img width="1200" height="1600" srcset="assets/img/dejeuner-terrasse-400.webp 400w, assets/img/dejeuner-terrasse-800.webp 800w, assets/img/dejeuner-terrasse.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/dejeuner-terrasse.webp" alt="Salade en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-miroir.webp"><img width="1200" height="1600" srcset="assets/img/salle-miroir-400.webp 400w, assets/img/salle-miroir-800.webp 800w, assets/img/salle-miroir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-miroir.webp" alt="Coin de la salle" loading="lazy"></button>
     </div>
   </section>
 
@@ -202,7 +261,7 @@
 
   <!-- HISTOIRE (teaser) -->
   <section class="teaser">
-    <img src="assets/img/salle-comptoir.jpg" alt="" loading="lazy" class="teaser__img">
+    <img width="1200" height="1600" srcset="assets/img/salle-comptoir-400.webp 400w, assets/img/salle-comptoir-800.webp 800w, assets/img/salle-comptoir.webp 1200w" sizes="100vw" src="assets/img/salle-comptoir.webp" alt="" loading="lazy" class="teaser__img">
     <div class="teaser__box">
       <p class="eyebrow" data-i18n="teaser.eyebrow">Notre histoire</p>
       <h2 class="h2" data-i18n="teaser.title">Un coin de Paris qui a du caractère.</h2>
@@ -237,8 +296,13 @@
           <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" data-i18n="infos.route">Itinéraire</a>
         </div>
       </div>
-      <div class="infos__map">
-        <iframe title="Plan d'accès Brasserie Jaja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Brasserie%20Jaja%2C%2047%20rue%20d%27Amsterdam%2C%2075008%20Paris&amp;z=16&amp;output=embed"></iframe>
+      <div class="infos__map" id="map">
+        <div class="map-consent">
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          <p class="map-consent__addr">47 rue d'Amsterdam<br>75008 Paris</p>
+          <button type="button" class="btn btn--line js-map" data-i18n="map.show">Afficher le plan</button>
+          <p class="map-consent__note" data-i18n="map.note">Le plan est fourni par Google Maps, qui dépose ses propres cookies.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -247,13 +311,14 @@
 
 <footer class="footer">
   <div class="wrap footer__grid">
-    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="footer__logo" width="450" height="195" loading="lazy">
+    <img src="assets/img/logo-jaja-sand.png" alt="Brasserie Jaja" class="footer__logo" width="455" height="200" loading="lazy">
     <div>
       <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
       <p><a href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener">Instagram @brasseriejaja</a></p>
     </div>
     <div class="footer__small">
       <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
+      <p><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a></p>
       <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
     </div>
   </div>
@@ -265,9 +330,10 @@
   <div class="lightbox__media" id="lightboxMedia"></div>
 </div>
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/carte.js"></script>
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/main.js?v=8"></script>
+<script src="assets/js/config.js?v=21"></script>
+<script src="assets/js/carte.js?v=21"></script>
+<script src="assets/js/i18n.js?v=21"></script>
+<script src="assets/js/motion.js?v=21"></script>
+<script src="assets/js/main.js?v=21"></script>
 </body>
 </html>

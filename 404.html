@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <script>document.write('<base href="'+(location.pathname.indexOf("/brasserie-jaja/")===0?"/brasserie-jaja/":"/")+'">')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Version de validation : retirer cette ligne et robots.txt à la mise en ligne officielle -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Page introuvable — Brasserie Jaja</title>
+  <meta name="description" content="Cette page n'existe pas.">
+  <meta name="theme-color" content="#F3D9A8">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/caslon-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion");
+    // Au rechargement : toujours revenir en haut de la page (et oublier l'ancre #section)
+    if("scrollRestoration" in history)history.scrollRestoration="manual";
+    (function(){var n=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];
+      if(n&&n.type==="reload"){
+        if(location.hash)history.replaceState(null,"",location.pathname+location.search);
+        var top=function(){window.scrollTo(0,0);};
+        top();document.addEventListener("DOMContentLoaded",top);
+        window.addEventListener("load",function(){top();setTimeout(top,0);});
+      }})();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css?v=21">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
+    <img src="assets/img/logo-jaja-white.png" alt="Brasserie Jaja" class="logo-light" width="455" height="200">
+    <img src="assets/img/logo-jaja-ink.png" alt="" class="logo-dark" width="455" height="200" aria-hidden="true">
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+    <a href="index.html#maison" data-i18n="nav.maison">La maison</a>
+    <a href="index.html#carte" data-i18n="nav.carte">La carte</a>
+    <a href="index.html#vins" data-i18n="nav.vins">Les vins</a>
+    <a href="index.html#avis" data-i18n="nav.avis">Avis</a>
+    <a href="histoire.html" data-i18n="nav.histoire">Notre histoire</a>
+    <a href="index.html#infos" data-i18n="nav.infos">Infos</a>
+  </nav>
+  <div class="nav__end">
+    <div class="lang" role="group" aria-label="Langue">
+      <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="btn btn--red js-book" type="button" data-i18n="cta.book">Réserver</button>
+    <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span class="sr" data-i18n="nav.menu">Menu</span></button>
+  </div>
+</header>
+
+<main class="legal legal--404">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="e404.eyebrow">Erreur 404</p>
+    <h1 data-i18n="e404.title">Cette table n'existe pas.</h1>
+    <p data-i18n="e404.text">La page que vous cherchez a peut-être changé d'adresse. Pas de panique, il reste de la place en terrasse.</p>
+    <div class="hero__cta">
+      <a class="btn btn--red" href="./" data-i18n="e404.home">Retour à l'accueil</a>
+      <a class="btn btn--line" href="#carte" data-i18n="cta.menu">Voir la carte</a>
+    </div>
+  </div>
+</main>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <img src="assets/img/logo-jaja-sand.png" alt="Brasserie Jaja" class="footer__logo" width="455" height="200" loading="lazy">
+    <div>
+      <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
+      <p><a href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener">Instagram @brasseriejaja</a></p>
+    </div>
+    <div class="footer__small">
+      <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
+      <p><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a></p>
+      <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="assets/js/config.js?v=21"></script>
+<script src="assets/js/i18n.js?v=21"></script>
+<script src="assets/js/motion.js?v=21"></script>
+<script src="assets/js/main.js?v=21"></script>
+</body>
+</html>

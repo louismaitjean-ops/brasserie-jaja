@@ -43,6 +43,7 @@
     renderVins();
     renderReviews();
     renderOpenNow();
+    if (window.JajaMotion) window.JajaMotion.refresh();
   }
 
   $$(".lang button").forEach(function (b) {
@@ -101,7 +102,24 @@
         });
       });
     };
-    document.body.appendChild(sdk);
+    // chargé juste après la page pour ne pas la ralentir
+    var loadSdk = function () {
+      if (sdk.parentNode) return;
+      document.body.appendChild(sdk);
+      // le widget Zenchef n'a pas de titre : on lui en donne un pour les lecteurs d'écran
+      var tries = 0, t = setInterval(function () {
+        $$("iframe[src*='zenchef']:not([title])").forEach(function (f) { f.title = lang === "fr" ? "Réservation en ligne" : "Online booking"; });
+        if (++tries > 20) clearInterval(t);
+      }, 500);
+    };
+    if (document.readyState === "complete") setTimeout(loadSdk, 800);
+    else window.addEventListener("load", function () { setTimeout(loadSdk, 800); });
+    // si le visiteur clique très tôt sur « Réserver », on ouvre directement la page de réservation
+    $$(".js-book").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (!sdk.parentNode) window.open("https://bookings.zenchef.com/results?rid=" + CFG.zenchefId + "&lang=" + lang, "_blank", "noopener");
+      });
+    });
   }
 
   /* ---------------- Carte interactive ---------------- */
@@ -125,7 +143,7 @@
     var thumb = media
       ? '<button type="button" class="dish__thumb" data-src="' + esc(item.img ? "assets/img/" + item.img : "") + '"' +
         (item.video ? ' data-video="' + esc(item.video) + '"' : "") + ' aria-label="' + esc(item.name) + '">' +
-        (item.img ? '<img src="assets/img/' + esc(item.img) + '" alt="" loading="lazy">' : "▶") + "</button>"
+        (item.img ? '<img src="assets/img/' + esc(item.img.replace(/\.webp$/, "-400.webp")) + '" alt="" width="72" height="72" loading="lazy">' : "▶") + "</button>"
       : "";
     var allergens = (item.allergens || []).map(function (a) { return ui().a[a] || a; }).join(", ");
     return '<article class="dish' + (media ? " has-img" : "") + '">' + thumb +
@@ -156,6 +174,7 @@
         (items.length ? items.map(dishHTML).join("") : '<p class="carte__empty">' + ui().empty + "</p>") + "</div>";
     }).join("");
     boardEl.innerHTML = html || '<p class="carte__empty">' + ui().empty + "</p>";
+    if (window.JajaMotion) window.JajaMotion.dishes(boardEl);
   }
 
   if (tabsEl) {
@@ -243,6 +262,9 @@
     }).join("");
   }
 
+  var moreWines = $(".vins__more");
+  if (moreWines) moreWines.addEventListener("click", function () { $(".vins").classList.add("is-open"); });
+
   /* ---------------- Avis Google ---------------- */
   var state = { rating: CFG.rating || 4.4, count: CFG.reviewCount || 0, reviews: CFG.reviews || [] };
 
@@ -259,13 +281,14 @@
     track.innerHTML = state.reviews.map(function (r) {
       var when = typeof r.when === "string" ? r.when : tr(r.when);
       var initial = (r.author || "?").trim().charAt(0).toUpperCase();
-      return '<figure class="review"><span class="stars" style="--r:' + r.rating + '" aria-label="' + r.rating + '/5"></span>' +
+      return '<figure class="review"><span class="stars" role="img" style="--r:' + r.rating + '" aria-label="' + r.rating + '/5"></span>' +
         "<blockquote>" + esc(r.text) + "</blockquote><footer>" +
         '<span class="review__avatar">' + (r.photo ? '<img src="' + esc(r.photo) + '" alt="" referrerpolicy="no-referrer">' : initial) + "</span>" +
         "<span>" + (r.authorUrl ? '<a href="' + esc(r.authorUrl) + '" target="_blank" rel="noopener">' + esc(r.author) + "</a>" : esc(r.author)) + "<time>" + esc(when) + " · Google</time></span></footer></figure>";
     }).join("");
     moveReviews(0);
     renderRating();
+    if (window.JajaMotion) window.JajaMotion.refresh();
   }
   function moveReviews(delta) {
     var track = $("#avisTrack");
@@ -306,8 +329,8 @@
   // [ouverture, fermeture] en heures, fermeture après minuit = +24. Index 0 = dimanche.
   var HOURS = [[9, 23], [8, 25], [8, 25], [8, 25], [8, 25], [8, 25], [9, 25]];
   function renderOpenNow() {
-    var el = $("#openNow");
-    if (!el) return;
+    var els = $$("#openNow, #openNowTop");
+    if (!els.length) return;
     var parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
     var get = function (t) { return (parts.filter(function (p) { return p.type === t; })[0] || {}).value; };
     var day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(get("weekday"));
@@ -319,9 +342,20 @@
     else if (h >= today[0] && h < today[1]) { open = true; text = ui().closesAt + " " + fmt(today[1]); }
     else if (h < today[0]) { text = ui().opensAt + " " + fmt(today[0]); }
     else { text = ui().opensAt + " " + fmt(HOURS[(day + 1) % 7][0]); }
-    el.textContent = (open ? ui().openNow : ui().closedNow) + " — " + text;
-    el.style.setProperty("--dot", open ? "#3f8f5a" : "#bd2341");
+    els.forEach(function (el) {
+      var short = el.id === "openNowTop";
+      el.textContent = (open ? (short ? ui().openShort : ui().openNow) : (short ? ui().closedShort : ui().closedNow)) + " · " + text;
+      el.style.setProperty("--dot", open ? "#3f8f5a" : "#b3402f");
+    });
   }
+
+  /* ---------------- Plan Google Maps (chargé seulement si le visiteur le demande) ---------------- */
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".js-map")) return;
+    var map = $("#map");
+    map.innerHTML = '<iframe title="Plan d\'accès Brasserie Jaja" referrerpolicy="no-referrer-when-downgrade" ' +
+      'src="https://maps.google.com/maps?q=Brasserie%20Jaja%2C%2047%20rue%20d%27Amsterdam%2C%2075008%20Paris&z=16&hl=' + lang + '&output=embed"></iframe>';
+  });
 
   /* ---------------- Lightbox ---------------- */
   var lb = $("#lightbox");
@@ -358,15 +392,13 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
   }
 
-  /* ---------------- Apparitions ---------------- */
-  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    $$(".section-head, .maison__text, .maison__photo, .sig, .vins__group, .review, .teaser__box, .tl, .valeur, .source, .membre").forEach(function (el) {
-      el.classList.add("reveal");
-      io.observe(el);
-    });
+  /* ---------------- Statistiques (Plausible, sans cookie) ---------------- */
+  if (CFG.plausibleDomain) {
+    var pl = document.createElement("script");
+    pl.defer = true;
+    pl.setAttribute("data-domain", CFG.plausibleDomain);
+    pl.src = "https://plausible.io/js/script.js";
+    document.head.appendChild(pl);
   }
 
   var y = $("#year");

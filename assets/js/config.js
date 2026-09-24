@@ -10,6 +10,10 @@ window.SITE_CONFIG = {
   // la note et la sélection d'avis ci-dessous (relevées sur Google le 24/09/2026).
   googleReviewsUrl: "https://www.google.com/maps/search/?api=1&query=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris",
 
+  // Statistiques de visite sans cookie (Plausible, conforme CNIL, pas de bandeau nécessaire).
+  // Créer le site sur plausible.io puis indiquer ici le domaine, ex. "brasseriejaja.fr".
+  plausibleDomain: "",
+
   // Carte modifiable sans agence : publier un Google Sheets en CSV
   // (Fichier > Partager > Publier sur le Web > CSV) et coller le lien ici.
   // Colonnes : categorie, nom, description, description_en, prix, regimes, allergenes, photo
