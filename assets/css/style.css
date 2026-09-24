@@ -454,7 +454,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .legal h1 { font: 400 clamp(40px, 6vw, 64px)/1.05 var(--serif-d); margin: 0 0 32px; }
 .legal h2 { font: 600 13px/1.4 var(--caps); letter-spacing: .18em; text-transform: uppercase; color: var(--red); margin: 44px 0 12px; }
 .legal p { color: var(--ink-soft); margin: 0 0 14px; }
-.legal a { color: var(--ink); text-underline-offset: 3px; }
+.legal a:not(.btn) { color: var(--ink); text-underline-offset: 3px; }
 .legal mark { background: #f6e3b4; color: var(--ink); padding: 0 4px; }
 .legal__date { font-style: italic; font-size: 15px; }
 .legal--404 { min-height: 80svh; display: grid; align-content: center; text-align: center; }
