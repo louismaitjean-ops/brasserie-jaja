@@ -1,0 +1,38 @@
+# MODÈLE : à remettre dans .github/workflows/avis-google.yml quand la clé Google sera prête
+# (il faut aussi autoriser GitHub : gh auth refresh -h github.com -s workflow)
+# Met à jour les avis Google du site chaque matin (et à la demande).
+# Clé à ajouter dans GitHub : Settings > Secrets and variables > Actions >
+#   GOOGLE_PLACES_KEY (obligatoire), GOOGLE_PLACE_ID (facultatif)
+name: Avis Google
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Récupérer les avis
+        run: |
+          if [ -z "$GOOGLE_PLACES_KEY" ]; then echo "Pas encore de clé Google : rien à faire."; exit 0; fi
+          node scripts/update-avis.mjs
+        env:
+          GOOGLE_PLACES_KEY: ${{ secrets.GOOGLE_PLACES_KEY }}
+          GOOGLE_PLACE_ID: ${{ secrets.GOOGLE_PLACE_ID }}
+      - name: Enregistrer si les avis ont changé
+        run: |
+          git config user.name "avis-bot"
+          git config user.email "avis-bot@users.noreply.github.com"
+          [ -f assets/data/avis.json ] || exit 0
+          git add assets/data/avis.json
+          git diff --cached --quiet || git commit -m "Avis Google du $(date +%d/%m/%Y)"
+          git push
