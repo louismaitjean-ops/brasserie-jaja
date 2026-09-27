@@ -166,8 +166,9 @@
       if (!set) return;
       $$(".is-clone", r.el).forEach(function (c) { c.remove(); });
       r.w = set.offsetWidth;
+      if (!r.w) return; // bandeau masqué (téléphone) : pas de copies
       // assez de copies pour couvrir l'écran pendant la boucle
-      var copies = Math.max(2, Math.ceil(window.innerWidth / Math.max(r.w, 1)) + 1);
+      var copies = Math.min(6, Math.max(2, Math.ceil(window.innerWidth / r.w) + 1));
       for (var i = 0; i < copies; i++) {
         var c = set.cloneNode(true);
         c.classList.add("is-clone");
