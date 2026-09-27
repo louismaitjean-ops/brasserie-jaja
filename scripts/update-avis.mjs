@@ -7,12 +7,15 @@
  */
 import { writeFile, mkdir } from "node:fs/promises";
 
-const KEY = process.env.GOOGLE_PLACES_KEY;
+// on nettoie les espaces, retours à la ligne ou guillemets collés par erreur
+const KEY = (process.env.GOOGLE_PLACES_KEY || "").trim().replace(/^["']+|["']+$/g, "").trim();
 const PLACE_ID = process.env.GOOGLE_PLACE_ID;
 const QUERY = "Brasserie Jaja, 47 rue d'Amsterdam, 75008 Paris";
 const OUT = new URL("../assets/data/avis.json", import.meta.url);
 const FIELDS = ["id", "rating", "userRatingCount", "reviews", "googleMapsUri"];
 
+// diagnostic sans jamais afficher la clé : longueur et 4 premiers caractères
+console.log(`Clé reçue : ${KEY.length} caractères, commence par « ${KEY.slice(0, 4)} », espaces internes : ${/\s/.test(KEY) ? "oui" : "non"} (attendu : 39 caractères, « AIza »)`);
 if (!KEY) {
   console.error("GOOGLE_PLACES_KEY manquante.");
   process.exit(1);
