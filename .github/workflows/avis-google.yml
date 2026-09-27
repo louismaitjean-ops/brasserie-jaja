@@ -1,5 +1,3 @@
-# MODÈLE : à remettre dans .github/workflows/avis-google.yml quand la clé Google sera prête
-# (il faut aussi autoriser GitHub : gh auth refresh -h github.com -s workflow)
 # Met à jour les avis Google du site chaque matin (et à la demande).
 # Clé à ajouter dans GitHub : Settings > Secrets and variables > Actions >
 #   GOOGLE_PLACES_KEY (obligatoire), GOOGLE_PLACE_ID (facultatif)
