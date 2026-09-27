@@ -21,23 +21,43 @@
   var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
   /* ---------- Apparitions ---------- */
+  var pending = [];
+
+  function reveal(el) {
+    if (el._in) return;
+    el._in = true;
+    el.classList.add("is-in");
+    io.unobserve(el);
+    if (el._onIn) el._onIn();
+    // une fois apparu, on retire le délai pour que les survols restent vifs
+    setTimeout(function () { el.style.setProperty("--d", "0s"); }, 1800);
+  }
+
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      var el = en.target;
-      el.classList.add("is-in");
-      io.unobserve(el);
-      if (el._onIn) el._onIn();
-      // une fois apparu, on retire le délai pour que les survols restent vifs
-      setTimeout(function () { el.style.setProperty("--d", "0s"); }, 1800);
-    });
+    entries.forEach(function (en) { if (en.isIntersecting) reveal(en.target); });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
+
+  // Filet de sécurité : certains navigateurs (Safari iPhone surtout) ratent parfois
+  // l'apparition (défilement très rapide, carrousels horizontaux…). À chaque défilement,
+  // tout ce qui est à l'écran ou au-dessus est affiché, quoi qu'il arrive.
+  function sweep() {
+    if (!pending.length) return;
+    var vh = window.innerHeight, vw = window.innerWidth;
+    pending = pending.filter(function (el) {
+      if (el._in) return false;
+      var r = el.getBoundingClientRect();
+      if (r.width === 0 && r.height === 0) return true; // masqué (ex. version mobile)
+      if (r.top < vh * 0.96 && r.left < vw && r.right > 0) { reveal(el); return false; }
+      return true;
+    });
+  }
 
   function watch(el, cls, delay) {
     if (el._m) return;
     el._m = true;
     if (cls) el.classList.add(cls);
     if (delay) el.style.setProperty("--d", delay + "ms");
+    pending.push(el);
     io.observe(el);
   }
 
@@ -195,6 +215,7 @@
 
   function update() {
     ticking = false;
+    sweep();
     var y = window.scrollY;
     var vh = window.innerHeight;
     var max = document.documentElement.scrollHeight - vh;
@@ -241,6 +262,10 @@
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
+  // défilements internes (carrousel des plats, avis) : capturés aussi
+  document.addEventListener("scroll", onScroll, { passive: true, capture: true });
+  // et une vérification régulière au cas où aucun événement n'arrive
+  setInterval(sweep, 1200);
   window.addEventListener("resize", function () { measureBand(); onScroll(); });
   window.addEventListener("load", function () { measureBand(); update(); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureBand);

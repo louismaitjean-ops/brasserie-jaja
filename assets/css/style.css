@@ -81,6 +81,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   transition: color .35s var(--ease), border-color .35s var(--ease);
   white-space: nowrap;
   position: relative; overflow: hidden; isolation: isolate;
+  background: transparent; -webkit-appearance: none; appearance: none;
 }
 .btn::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
