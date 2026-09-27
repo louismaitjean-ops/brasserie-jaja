@@ -514,6 +514,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .g:nth-child(n+7) { display: none; }
 
   .avis, .infos { padding: 56px 0; }
+  .infos__map { min-height: 0; }
+  .map-consent { padding: 36px 20px; }
+  .infos__map iframe { min-height: 340px; }
+  .review { min-height: 0; padding: 26px 22px; }
   .avis__big { font-size: 72px; }
   .teaser { padding-top: 220px; }
 }
