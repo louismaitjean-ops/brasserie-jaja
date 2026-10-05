@@ -611,3 +611,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   /* Carte : les plats arrivent en cascade à chaque changement d'onglet */
   .motion .carte__board > .carte__cat > * { animation: rise .7s var(--ease) both; animation-delay: calc(var(--i, 0) * 40ms); }
 }
+
+/* ---------- Instagram ---------- */
+.nav__insta { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; transition: background .25s, color .25s, transform .25s var(--ease); }
+.nav__insta:hover { background: var(--sand); color: var(--ink); transform: scale(1.06); }
+.footer__insta { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px 10px 12px; border: 1px solid rgba(253,248,236,.35); border-radius: 999px; text-decoration: none; font: 600 13px/1 var(--caps); letter-spacing: .08em; transition: background .25s, color .25s, border-color .25s; }
+.footer__insta:hover { background: var(--sand); border-color: var(--sand); color: var(--ink) !important; }
+@media (max-width: 1120px) { .nav__end { gap: 8px; } }
