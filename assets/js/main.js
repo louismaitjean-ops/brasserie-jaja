@@ -169,7 +169,8 @@
     var html = shown.map(function (c) {
       var items = c.items.filter(matches);
       if (!items.length && activeCat === "all") return "";
-      return '<div class="carte__cat"><h3 class="carte__cat-title">' + esc(tr(c.title)) + "</h3>" +
+      var cover = c.cover ? '<figure class="carte__cover"><img src="assets/img/' + esc(c.cover.replace(/\.webp$/, "-800.webp")) + '" alt="" width="800" height="1067" loading="lazy"></figure>' : "";
+      return '<div class="carte__cat' + (cover ? " has-cover" : "") + '">' + cover + '<h3 class="carte__cat-title">' + esc(tr(c.title)) + "</h3>" +
         (c.note ? '<p class="carte__cat-note">' + esc(tr(c.note)) + "</p>" : "") +
         (items.length ? items.map(dishHTML).join("") : '<p class="carte__empty">' + ui().empty + "</p>") + "</div>";
     }).join("");
@@ -183,6 +184,13 @@
       if (!b) return;
       activeCat = b.dataset.cat;
       renderCarte();
+    });
+    // les photos « Du matin au soir » ouvrent directement la bonne catégorie
+    $$("[data-goto-cat]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        activeCat = a.dataset.gotoCat;
+        renderCarte();
+      });
     });
     $$("#carteFilters .chip").forEach(function (chip) {
       chip.addEventListener("click", function () {

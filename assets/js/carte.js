@@ -9,6 +9,7 @@
  * allergens : gluten, crustaces, oeufs, poisson, arachide, soja, lait,
  *             fruits-a-coque, celeri, moutarde, sesame, sulfites, lupin, mollusques
  * img     : photo du plat (dossier assets/img), facultatif
+ * cover   : grande photo en tête de catégorie (dossier assets/img), facultatif
  * video   : lien d'une vidéo (mp4 ou YouTube), facultatif
  *
  * Mise à jour sans toucher au code : voir SITE_CONFIG.menuSheetUrl
@@ -17,6 +18,7 @@
 window.CARTE = [
   {
     id: "entrees",
+    cover: "soupe-oignon.webp",
     title: { fr: "Entrées", en: "Starters" },
     items: [
       { name: "Œufs mimosa", desc: { fr: "Herbes fraîches", en: "Devilled eggs, fresh herbs" }, price: 7.5, diet: ["veg", "gf", "lf"], allergens: ["oeufs", "moutarde"] },
@@ -28,6 +30,7 @@ window.CARTE = [
   },
   {
     id: "salades",
+    cover: "beau-boon.webp",
     title: { fr: "Salades & toasts", en: "Salads & toasts" },
     items: [
       { name: "Bo bun", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.webp" },
@@ -38,6 +41,7 @@ window.CARTE = [
   },
   {
     id: "partager",
+    cover: "planche-cafe.webp",
     title: { fr: "À partager", en: "To share" },
     items: [
       { name: "Caviar d'aubergines", desc: { fr: "Maison A Peasena", en: "Aubergine dip, A Peasena" }, price: 10, diet: ["veg", "vegan", "gf", "lf"], allergens: ["sesame"] },
@@ -56,6 +60,7 @@ window.CARTE = [
   },
   {
     id: "plats",
+    cover: "boeuf-bourguignon.webp",
     title: { fr: "Plats", en: "Mains" },
     items: [
       { name: "Pièce du boucher", desc: { fr: "Voir l'ardoise du jour", en: "Butcher's cut — see today's board" }, price: null, priceLabel: { fr: "Ardoise", en: "See board" }, diet: ["gf", "lf"], allergens: [], img: "piece-du-boucher.webp" },
@@ -87,6 +92,7 @@ window.CARTE = [
   },
   {
     id: "petit-dej",
+    cover: "oeufs-brouilles.webp",
     title: { fr: "Petit déjeuner", en: "Breakfast" },
     note: { fr: "Servi dès l'ouverture. Supp. cappuccino ou chocolat chaud 2 €, crème 1,50 €, lait végétal 1 €.", en: "Served from opening time. Cappuccino or hot chocolate +€2, cream +€1.50, plant milk +€1." },
     items: [

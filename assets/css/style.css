@@ -592,7 +592,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .motion .mask { position: relative; overflow: hidden; }
   .motion .mask::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: var(--mask-bg, var(--paper)); transform-origin: top; transition: transform 1.3s var(--ease) var(--d, 0s); }
   .motion .mask.is-in::after { transform: scaleY(0); }
-  .motion .galerie .mask { --mask-bg: var(--ink); }
+  .motion .galerie .mask, .motion .quartier .mask { --mask-bg: var(--ink); }
   .motion .equipe .mask, .motion .infos .mask { --mask-bg: var(--stone); }
   .motion .mask img, .motion .mask iframe { scale: 1.18; transition: scale 1.8s var(--ease) var(--d, 0s), transform .8s var(--ease), opacity .3s; }
   .motion .mask.is-in img, .motion .mask.is-in iframe { scale: 1; }
@@ -643,3 +643,44 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .quartier__list li { grid-template-columns: 72px 1fr; padding: 12px 0; }
   .quartier__min { font-size: 36px; }
 }
+
+/* ---------- Nos espaces (photos en arche) ---------- */
+.espaces { margin-top: clamp(64px, 9vw, 110px); text-align: center; }
+.espaces__row { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 28px); }
+.arch { margin: 0; }
+.arch img { width: 100%; aspect-ratio: 3/4.2; object-fit: cover; border-radius: 999px 999px 0 0; transition: transform .8s var(--ease); }
+.arch:hover img { transform: scale(1.03); }
+.arch figcaption { margin-top: 14px; font: 400 22px/1.2 var(--serif-d); }
+@media (max-width: 700px) {
+  .espaces__row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 6px; scroll-padding-inline: var(--gutter); scrollbar-width: none; }
+  .espaces__row::-webkit-scrollbar { display: none; }
+  .arch { flex: 0 0 62%; scroll-snap-align: start; }
+  .arch figcaption { font-size: 19px; }
+}
+
+/* ---------- Du matin au soir (photos vers la carte) ---------- */
+.momo { padding: 0 0 clamp(80px, 10vw, 130px); }
+.momo__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.momo__card { position: relative; display: block; overflow: hidden; aspect-ratio: 3/4.3; color: var(--paper); text-decoration: none; background: var(--ink); }
+.momo__card img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease), opacity .5s; }
+.momo__card::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(27,26,23,0) 30%, rgba(27,26,23,.9) 100%); }
+.momo__txt { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 22px; display: flex; flex-direction: column; gap: 6px; }
+.momo__txt strong { font: 400 clamp(26px, 2.6vw, 34px)/1.05 var(--serif-d); }
+.momo__txt em { font-style: normal; font-size: 15px; opacity: .85; }
+.momo__go { margin-top: 8px; font: 600 11px/1 var(--caps); letter-spacing: .18em; text-transform: uppercase; color: var(--sand); }
+.momo__go::after { content: " →"; display: inline-block; transition: transform .3s var(--ease); }
+.momo__card:hover img { transform: scale(1.06); }
+.momo__card:hover .momo__go::after { transform: translateX(5px); }
+@media (max-width: 900px) { .momo__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) {
+  .momo { padding-bottom: 56px; }
+  .momo__grid { gap: 10px; }
+  .momo__txt { padding: 14px; }
+  .momo__txt strong { font-size: 22px; }
+  .momo__txt em { font-size: 13px; }
+}
+
+/* ---------- Carte : grande photo par catégorie ---------- */
+.carte__cover { margin: 0 0 22px; overflow: hidden; aspect-ratio: 21/8; }
+.carte__cover img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 700px) { .carte__cover { aspect-ratio: 16/9; margin-left: calc(var(--gutter) * -1); margin-right: calc(var(--gutter) * -1); } }
