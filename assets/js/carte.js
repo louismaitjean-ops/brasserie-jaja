@@ -30,7 +30,7 @@ window.CARTE = [
     id: "salades",
     title: { fr: "Salades & toasts", en: "Salads & toasts" },
     items: [
-      { name: "Beau boon", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.webp" },
+      { name: "Bo bun", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.webp" },
       { name: "Salade chèvre chaud", desc: { fr: "Salade mixte, tomates cerises, poitrine fumée, brick chèvre miel, noix", en: "Mixed leaves, cherry tomatoes, smoked bacon, goat's cheese & honey brick, walnuts" }, price: 18, diet: [], allergens: ["gluten", "lait", "fruits-a-coque"] },
       { name: "Salade césar", desc: { fr: "Salade romaine, parmesan, croûtons, poulet croustillant, œuf mollet, sauce césar", en: "Romaine, parmesan, croutons, crispy chicken, soft-boiled egg, Caesar dressing" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs", "poisson", "moutarde"] },
       { name: "Avocado toast", desc: { fr: "Purée d'avocat, œufs mollets, feta, salade verte, grenade", en: "Smashed avocado, soft-boiled eggs, feta, green salad, pomegranate" }, price: 19, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "dejeuner-terrasse.webp" }
