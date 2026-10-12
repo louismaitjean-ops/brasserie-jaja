@@ -1,0 +1,20 @@
+# Brasserie Jaja
+
+> Brasserie parisienne et bar au 47 rue d'Amsterdam, 75008 Paris (8e arrondissement, quartier de l'Europe), à 5 minutes à pied de la gare Saint-Lazare et juste au-dessus du métro Liège (ligne 13). Terrasse sur rue piétonne, cuisine de brasserie faite maison, service continu, ouvert 7 jours sur 7.
+
+## Infos pratiques
+- Adresse : 47 rue d'Amsterdam, 75008 Paris, France
+- Accès : métro Liège (13) ; gare Saint-Lazare (trains, RER E, métros 3, 12, 13, 14) à 5 min à pied ; place de Clichy (2, 13) à 7 min
+- Téléphone : 09 67 40 85 93
+- Horaires : lundi–vendredi 8h–1h, samedi 9h–1h, dimanche 9h–23h
+- Réservation : en ligne (Zenchef) ou par téléphone
+- Note Google : 4,4/5 (954 avis)
+- Services : terrasse, Wi-Fi, accès fauteuil roulant, chiens acceptés, titres restaurant, groupes et privatisation jusqu'à 20 personnes
+- Instagram : https://www.instagram.com/brasseriejaja/
+
+## Ce qu'on y mange
+Petit déjeuner dès l'ouverture, puis classiques de brasserie faits maison : bœuf bourguignon, soupe à l'oignon, tartare au couteau, pièce du boucher, bo bun, salades, planches à partager, desserts maison. Plats végétariens, vegan, sans gluten et sans lactose signalés.
+
+## Pages
+- [Accueil, carte et infos](https://louismaitjean-ops.github.io/brasserie-jaja/)
+- [Notre histoire](https://louismaitjean-ops.github.io/brasserie-jaja/histoire.html)
