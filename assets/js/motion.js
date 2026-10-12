@@ -108,10 +108,10 @@
        ".quartier__text > p:not(.eyebrow), .quartier__text .btn, .avis__big, .avis__count, .cta-band .hero__cta, .footer__grid > *").forEach(function (el) { watch(el, "reveal"); });
 
     // groupes en cascade
-    [".sig-grid", ".espaces__row", ".momo__grid", ".quartier__list", ".moments", ".hours", ".infos__list", ".vins__cols", ".valeurs__grid", ".sourcing__grid", ".equipe__grid", "#avisTrack"].forEach(function (sel) {
+    [".sig-grid", ".tour__row", ".heures__grid", ".quartier__list", ".moments", ".hours", ".infos__list", ".vins__cols", ".valeurs__grid", ".sourcing__grid", ".equipe__grid", "#avisTrack"].forEach(function (sel) {
       $$(sel).forEach(function (group) {
         Array.prototype.forEach.call(group.children, function (child, i) {
-          var isMask = child.matches(".sig, .momo__card");
+          var isMask = child.matches(".sig");
           watch(child, isMask ? "mask" : "reveal", i * 90);
         });
       });
