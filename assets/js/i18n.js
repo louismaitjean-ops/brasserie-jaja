@@ -125,7 +125,7 @@ window.I18N = {
     "h.v3p": "Regulars, colleagues, tourists, dogs: everyone has a seat at Jaja.",
     "h.sEyebrow": "Sourcing",
     "h.sTitle": "Who we work with",
-    "h.s1": "Cured meats selected from Maison Conquet, Aveyron-based artisan charcutier.",
+    "h.s1": "Cured meats selected from Maison Conquet, an Aveyron-based artisan charcutier.",
     "h.s2": "Chablis and Aligoté from a family estate in Burgundy.",
     "h.s3": "Organic Côtes du Rhône and Crozes-Hermitage from a historic Rhône house.",
     "h.s4": "Grower Champagne from the Marne valley, by the glass or by the bottle.",
@@ -152,7 +152,7 @@ window.I18N = {
       closedNow: "Fermé en ce moment",
       closesAt: "ferme à",
       opensAt: "ouvre à",
-      a: { gluten: "gluten", crustaces: "crustacés", oeufs: "œufs", poisson: "poisson", arachide: "arachide", soja: "soja", lait: "lait", "fruits-a-coque": "fruits à coque", celeri: "céleri", moutarde: "moutarde", sesame: "sésame", sulfites: "sulfites", lupin: "lupin", mollusques: "mollusques" },
+      a: { gluten: "gluten", crustaces: "crustacés", oeufs: "œufs", poisson: "poisson", arachide: "arachides", soja: "soja", lait: "lait", "fruits-a-coque": "fruits à coque", celeri: "céleri", moutarde: "moutarde", sesame: "sésame", sulfites: "sulfites", lupin: "lupin", mollusques: "mollusques" },
       diet: { veg: "Végétarien", vegan: "Vegan", gf: "Sans gluten", lf: "Sans lactose" }
     },
     en: {

@@ -20,7 +20,7 @@ window.CARTE = [
     title: { fr: "Entrées", en: "Starters" },
     items: [
       { name: "Œufs mimosa", desc: { fr: "Herbes fraîches", en: "Devilled eggs, fresh herbs" }, price: 7.5, diet: ["veg", "gf", "lf"], allergens: ["oeufs", "moutarde"] },
-      { name: "Velouté potimarron", desc: { fr: "De saison", en: "Red kuri squash velouté" }, price: 10, diet: ["veg", "gf"], allergens: ["lait", "celeri"] },
+      { name: "Velouté de potimarron", desc: { fr: "De saison", en: "Red kuri squash velouté" }, price: 10, diet: ["veg", "gf"], allergens: ["lait", "celeri"] },
       { name: "Terrine de campagne", desc: { fr: "Cornichons, pain grillé", en: "Country-style pâté, pickles, toast" }, price: 9.5, diet: ["lf"], allergens: ["gluten", "oeufs", "sulfites"] },
       { name: "Soupe à l'oignon", desc: { fr: "Baguette gratinée au comté", en: "French onion soup, comté-gratinated baguette" }, price: 12, diet: [], allergens: ["gluten", "lait", "celeri"], img: "soupe-oignon.webp" },
       { name: "Nems aux légumes", desc: { fr: "Sucrine, menthe", en: "Vegetable spring rolls, lettuce, mint" }, price: 11, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "soja"] }
@@ -32,7 +32,7 @@ window.CARTE = [
     items: [
       { name: "Bo bun", desc: { fr: "Nems aux légumes, vermicelles, sucrine, concombre, chou rouge, oignons frits, cacahuètes, citronnelle, menthe, coriandre", en: "Vegetable spring rolls, vermicelli, lettuce, cucumber, red cabbage, fried onions, peanuts, lemongrass, mint, coriander" }, price: 17, diet: ["veg", "vegan", "lf"], allergens: ["gluten", "arachide", "soja"], img: "beau-boon.webp" },
       { name: "Salade chèvre chaud", desc: { fr: "Salade mixte, tomates cerises, poitrine fumée, brick chèvre miel, noix", en: "Mixed leaves, cherry tomatoes, smoked bacon, goat's cheese & honey brick, walnuts" }, price: 18, diet: [], allergens: ["gluten", "lait", "fruits-a-coque"] },
-      { name: "Salade césar", desc: { fr: "Salade romaine, parmesan, croûtons, poulet croustillant, œuf mollet, sauce césar", en: "Romaine, parmesan, croutons, crispy chicken, soft-boiled egg, Caesar dressing" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs", "poisson", "moutarde"] },
+      { name: "Salade César", desc: { fr: "Salade romaine, parmesan, croûtons, poulet croustillant, œuf mollet, sauce César", en: "Romaine, parmesan, croutons, crispy chicken, soft-boiled egg, Caesar dressing" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs", "poisson", "moutarde"] },
       { name: "Avocado toast", desc: { fr: "Purée d'avocat, œufs mollets, feta, salade verte, grenade", en: "Smashed avocado, soft-boiled eggs, feta, green salad, pomegranate" }, price: 19, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"], img: "dejeuner-terrasse.webp" }
     ]
   },
@@ -64,7 +64,7 @@ window.CARTE = [
       { name: "Bacon cheeseburger", desc: { fr: "Bacon, cheddar, chutney d'oignons, tomate, salade, pickles, frites", en: "Bacon, cheddar, onion chutney, tomato, lettuce, pickles, fries" }, price: 19.5, diet: [], allergens: ["gluten", "lait", "moutarde", "sesame"], img: "bacon-cheeseburger.webp" },
       { name: "Coquillettes truffées", desc: { fr: "Jambon, comté 12 mois", en: "Truffle pasta, ham, 12-month comté" }, price: 19, diet: [], allergens: ["gluten", "lait", "oeufs"] },
       { name: "Rigatoni à la tomate", desc: { fr: "Parmesan, basilic", en: "Tomato rigatoni, parmesan, basil" }, price: 17.5, diet: ["veg"], allergens: ["gluten", "lait"] },
-      { name: "Milanaise de veau", desc: { fr: "Rigatoni tomates, parmesan, basilic", en: "Veal Milanese, tomato rigatoni, parmesan, basil" }, price: 24, diet: [], allergens: ["gluten", "oeufs", "lait"] },
+      { name: "Milanaise de veau", desc: { fr: "Rigatoni à la tomate, parmesan, basilic", en: "Veal Milanese, tomato rigatoni, parmesan, basil" }, price: 24, diet: [], allergens: ["gluten", "oeufs", "lait"] },
       { name: "Croque truffé", desc: { fr: "Jambon, comté 12 mois, frites, salade", en: "Truffle croque, ham, 12-month comté, fries, salad" }, price: 19, diet: [], allergens: ["gluten", "lait"] },
       { name: "Fish & chips", desc: { fr: "Dans sa feuille de brick, sauce tartare, frites", en: "In brick pastry, tartare sauce, fries" }, price: 19.5, diet: [], allergens: ["gluten", "poisson", "oeufs", "moutarde"] },
       { name: "Filet mignon de porc", desc: { fr: "Écrasé de pommes de terre, crème d'ail", en: "Pork tenderloin, crushed potatoes, garlic cream" }, price: 20, diet: ["gf"], allergens: ["lait"] }
@@ -76,9 +76,9 @@ window.CARTE = [
     items: [
       { name: "Crème brûlée", desc: { fr: "Vanille", en: "Vanilla" }, price: 10, diet: ["veg", "gf"], allergens: ["oeufs", "lait"] },
       { name: "Mousse au chocolat", desc: { fr: "Crumble cacao", en: "Chocolate mousse, cocoa crumble" }, price: 10, diet: ["veg"], allergens: ["oeufs", "lait", "gluten"] },
-      { name: "Moelleux chocolat", desc: { fr: "Crème anglaise pistache", en: "Chocolate fondant, pistachio custard" }, price: 10, diet: ["veg"], allergens: ["gluten", "oeufs", "lait", "fruits-a-coque"] },
+      { name: "Moelleux au chocolat", desc: { fr: "Crème anglaise pistache", en: "Chocolate fondant, pistachio custard" }, price: 10, diet: ["veg"], allergens: ["gluten", "oeufs", "lait", "fruits-a-coque"] },
       { name: "Brioche perdue", desc: { fr: "Glace vanille, sirop d'érable", en: "French toast brioche, vanilla ice cream, maple syrup" }, price: 13, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"] },
-      { name: "Pannacotta", desc: { fr: "Fruits rouges", en: "Red berries" }, price: 10, diet: ["veg", "gf"], allergens: ["lait"] },
+      { name: "Panna cotta", desc: { fr: "Fruits rouges", en: "Red berries" }, price: 10, diet: ["veg", "gf"], allergens: ["lait"] },
       { name: "Salade de fruits", desc: { fr: "Fruits frais de saison", en: "Fresh seasonal fruit" }, price: 9, diet: ["veg", "vegan", "gf", "lf"], allergens: [] },
       { name: "Café gourmand", desc: { fr: "Café et mignardises", en: "Coffee with mini desserts" }, price: 11, diet: ["veg"], allergens: ["gluten", "oeufs", "lait"] },
       { name: "Assiette de fromages", desc: { fr: "Sélection du moment", en: "Cheese plate" }, price: 14, diet: ["veg"], allergens: ["lait", "gluten"] },
@@ -111,7 +111,7 @@ window.VINS = [
       ["Viognier", "Château Pesquié", 6.5, 22, 29],
       ["Tariquet Premières Grives", "IGP Côtes de Gascogne", 7, 24, 34],
       ["Bourgogne Aligoté", "Domaine Vincent Wengier", 8, 26, 39],
-      ["Mâcon Villages", "Cuvée Alphonse", 8.5, 29, 41],
+      ["Mâcon-Villages", "Cuvée Alphonse", 8.5, 29, 41],
       ["Petit Chablis", "Domaine Vincent Wengier", 9, 32, 44],
       ["Château Fontainebleau", "Côtes de Provence", null, null, 38],
       ["Sancerre « Grande Réserve »", "Famille Bourgeois", null, null, 49],
@@ -123,7 +123,7 @@ window.VINS = [
   {
     title: { fr: "Rouges", en: "Red" },
     items: [
-      ["Merlot", "IGP d'Oc · à la verse", 5.5, 19, 25],
+      ["Merlot", "IGP Pays d'Oc · à la verse", 5.5, 19, 25],
       ["Petit Fontainebleau", "Domaine Fontainebleau en Provence · à la verse", 6, 20, 27],
       ["Pinot Noir", "Cœur de Pinot", 6.5, 22, 29],
       ["Syrah Viognier", "IGP Pays d'Oc", 7, 24, 34],
@@ -146,7 +146,7 @@ window.VINS = [
     items: [
       ["Peyrassol", "IGP Méditerranée · à la verse", 6.5, 22, 27],
       ["Château Fontainebleau", "Côtes de Provence", 7.5, 26, 34],
-      ["Château Sainte Marguerite", "Fantastique, cru classé", null, null, 62]
+      ["Château Sainte-Marguerite", "Fantastique, cru classé", null, null, 62]
     ]
   },
   {
