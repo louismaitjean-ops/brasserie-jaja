@@ -38,7 +38,7 @@
         window.addEventListener("load",function(){top();setTimeout(top,0);});
       }})();
   </script>
-  <link rel="stylesheet" href="assets/css/style.css?v=28">
+  <link rel="stylesheet" href="assets/css/style.css?v=29">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,9 +70,9 @@
     <img src="assets/img/logo-jaja-ink.png" alt="" class="logo-dark" width="455" height="200" aria-hidden="true">
   </a>
   <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+    <a href="#quartier" data-i18n="nav.quartier">Le quartier</a>
     <a href="#maison" data-i18n="nav.maison">La maison</a>
     <a href="#carte" data-i18n="nav.carte">La carte</a>
-    <a href="#vins" data-i18n="nav.vins">Les vins</a>
     <a href="#avis" data-i18n="nav.avis">Avis</a>
     <a href="histoire.html" data-i18n="nav.histoire">Notre histoire</a>
     <a href="#infos" data-i18n="nav.infos">Infos</a>
@@ -94,7 +94,7 @@
   <section class="hero">
     <img width="1400" height="700" class="hero__img" srcset="assets/img/salle-bar-400.webp 400w, assets/img/salle-bar-800.webp 800w, assets/img/salle-bar.webp 1400w" sizes="100vw" src="assets/img/salle-bar.webp" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
     <div class="hero__inner">
-      <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Bar · Brasserie · Restaurant</p>
+      <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Brasserie · Saint-Lazare · Paris 8e</p>
       <h1 class="hero__title">
         <img src="assets/img/logo-jaja-ink.png" alt="Brasserie Jaja" width="455" height="200">
       </h1>
@@ -135,6 +135,26 @@
     </div>
   </nav>
 
+  <!-- L'EMPLACEMENT -->
+  <section class="quartier" id="quartier">
+    <div class="wrap quartier__grid">
+      <figure class="quartier__photo"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="(max-width: 900px) 100vw, 55vw" src="assets/img/rue-terrasse.webp" alt="La terrasse de la Brasserie Jaja sur la rue piétonne" loading="lazy"></figure>
+      <div class="quartier__text">
+        <p class="eyebrow eyebrow--light" data-i18n="quartier.eyebrow">L'emplacement</p>
+        <h2 class="h2" data-i18n="quartier.title">À deux pas de Saint-Lazare, en plein cœur du 8e.</h2>
+        <p data-i18n="quartier.p">Une terrasse au calme, sur une rue piétonne, à quelques minutes de la gare et des grands magasins. En sortant du train, du bureau ou du shopping, le Jaja est sur votre chemin.</p>
+        <ul class="quartier__list">
+          <li><span class="quartier__min">1<small>min</small></span><span><strong data-i18n="quartier.l1">Métro Liège</strong><em data-i18n="quartier.l1s">Ligne 13, juste en bas</em></span></li>
+          <li><span class="quartier__min">5<small>min</small></span><span><strong data-i18n="quartier.l2">Gare Saint-Lazare</strong><em data-i18n="quartier.l2s">Trains, RER E, métros 3, 12, 13, 14</em></span></li>
+          <li><span class="quartier__min">7<small>min</small></span><span><strong data-i18n="quartier.l3">Place de Clichy</strong><em data-i18n="quartier.l3s">Métros 2 et 13</em></span></li>
+          <li><span class="quartier__min">12<small>min</small></span><span><strong data-i18n="quartier.l4">Opéra et grands magasins</strong><em data-i18n="quartier.l4s">Printemps, Galeries Lafayette</em></span></li>
+        </ul>
+        <p class="quartier__note" data-i18n="quartier.note">Temps de marche indicatifs.</p>
+        <a class="btn btn--sand" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" data-i18n="quartier.cta">Itinéraire jusqu'au Jaja</a>
+      </div>
+    </div>
+  </section>
+
   <!-- LA MAISON -->
   <section class="maison" id="maison">
     <div class="wrap maison__grid">
@@ -151,6 +171,44 @@
       </div>
       <figure class="maison__photo maison__photo--a"><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 900px) 46vw, 26vw" src="assets/img/facade-soir.webp" alt="La façade et la terrasse de la Brasserie Jaja en soirée" loading="lazy"></figure>
       <figure class="maison__photo maison__photo--b"><img width="1200" height="1600" srcset="assets/img/bieres-terrasse-400.webp 400w, assets/img/bieres-terrasse-800.webp 800w, assets/img/bieres-terrasse.webp 1200w" sizes="(max-width: 900px) 46vw, 26vw" src="assets/img/bieres-terrasse.webp" alt="Deux bières en terrasse, le soir" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="galerie" aria-label="Photos">
+    <div class="galerie__grid" id="galerie">
+      <button class="g g--tall" data-src="assets/img/facade-soir.webp"><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/facade-soir.webp" alt="Façade en soirée" loading="lazy"></button>
+      <button class="g g--wide" data-src="assets/img/rue-terrasse.webp"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/rue-terrasse.webp" alt="La terrasse côté rue" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-comptoir.webp"><img width="1200" height="1600" srcset="assets/img/salle-comptoir-400.webp 400w, assets/img/salle-comptoir-800.webp 800w, assets/img/salle-comptoir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-comptoir.webp" alt="Le comptoir" loading="lazy"></button>
+      <button class="g" data-src="assets/img/oeufs-brouilles.webp"><img width="1200" height="1600" srcset="assets/img/oeufs-brouilles-400.webp 400w, assets/img/oeufs-brouilles-800.webp 800w, assets/img/oeufs-brouilles.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/oeufs-brouilles.webp" alt="Petit déjeuner, œufs brouillés" loading="lazy"></button>
+      <button class="g g--tall" data-src="assets/img/salle-entree.webp"><img width="1200" height="1600" srcset="assets/img/salle-entree-400.webp 400w, assets/img/salle-entree-800.webp 800w, assets/img/salle-entree.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-entree.webp" alt="L'entrée de la salle" loading="lazy"></button>
+      <button class="g" data-src="assets/img/bacon-cheeseburger.webp"><img width="1200" height="1600" srcset="assets/img/bacon-cheeseburger-400.webp 400w, assets/img/bacon-cheeseburger-800.webp 800w, assets/img/bacon-cheeseburger.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/bacon-cheeseburger.webp" alt="Bacon cheeseburger" loading="lazy"></button>
+      <button class="g" data-src="assets/img/terrasse-plats.webp"><img width="1200" height="1600" srcset="assets/img/terrasse-plats-400.webp 400w, assets/img/terrasse-plats-800.webp 800w, assets/img/terrasse-plats.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/terrasse-plats.webp" alt="Déjeuner en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/dejeuner-terrasse.webp"><img width="1200" height="1600" srcset="assets/img/dejeuner-terrasse-400.webp 400w, assets/img/dejeuner-terrasse-800.webp 800w, assets/img/dejeuner-terrasse.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/dejeuner-terrasse.webp" alt="Salade en terrasse" loading="lazy"></button>
+      <button class="g" data-src="assets/img/salle-miroir.webp"><img width="1200" height="1600" srcset="assets/img/salle-miroir-400.webp 400w, assets/img/salle-miroir-800.webp 800w, assets/img/salle-miroir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-miroir.webp" alt="Coin de la salle" loading="lazy"></button>
+    </div>
+  </section>
+
+  <!-- AVIS GOOGLE -->
+  <section class="avis" id="avis">
+    <div class="wrap avis__grid">
+      <div class="avis__score">
+        <p class="eyebrow" data-i18n="avis.eyebrow">Avis Google</p>
+        <p class="avis__big"><span class="js-rating">4,4</span><small>/5</small></p>
+        <span class="stars stars--lg js-stars" aria-hidden="true"></span>
+        <p class="avis__count"><span data-i18n="avis.based">Sur</span> <strong class="js-count">954</strong> <span data-i18n="avis.reviews">avis clients</span></p>
+        <div class="avis__links">
+          <a class="btn btn--red js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.all">Tous les avis</a>
+          <a class="link js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.write">Laisser un avis</a>
+        </div>
+      </div>
+      <div class="avis__list">
+        <div class="avis__track" id="avisTrack"></div>
+        <div class="avis__nav">
+          <button type="button" class="round" id="avisPrev" aria-label="Avis précédent">&larr;</button>
+          <button type="button" class="round" id="avisNext" aria-label="Avis suivant">&rarr;</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -204,59 +262,6 @@
       <div class="carte__board" id="carteBoard" aria-live="polite"></div>
 
       <p class="carte__legal" data-i18n="carte.legal">Prix nets en euros, service compris. Allergènes donnés à titre indicatif : demandez à notre équipe, elle vous renseignera avec plaisir.</p>
-    </div>
-  </section>
-
-  <!-- VINS -->
-  <section class="vins" id="vins">
-    <div class="wrap">
-      <div class="vins__head">
-        <div>
-          <p class="eyebrow eyebrow--light" data-i18n="vins.eyebrow">À la verse ou à la bouteille</p>
-          <h2 class="h2" data-i18n="vins.title">Les vins</h2>
-        </div>
-        <p class="vins__intro" data-i18n="vins.intro">Des vins de copains servis au verre, et quelques belles bouteilles de Bourgogne, du Rhône et de Bordeaux pour les grandes occasions.</p>
-      </div>
-      <div class="vins__cols" id="vinsList"></div>
-      <button type="button" class="btn btn--line vins__more" data-i18n="vins.more">Voir toute la carte des vins</button>
-    </div>
-  </section>
-
-  <!-- GALERIE -->
-  <section class="galerie" aria-label="Photos">
-    <div class="galerie__grid" id="galerie">
-      <button class="g g--tall" data-src="assets/img/facade-soir.webp"><img width="1200" height="1600" srcset="assets/img/facade-soir-400.webp 400w, assets/img/facade-soir-800.webp 800w, assets/img/facade-soir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/facade-soir.webp" alt="Façade en soirée" loading="lazy"></button>
-      <button class="g g--wide" data-src="assets/img/rue-terrasse.webp"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/rue-terrasse.webp" alt="La terrasse côté rue" loading="lazy"></button>
-      <button class="g" data-src="assets/img/salle-comptoir.webp"><img width="1200" height="1600" srcset="assets/img/salle-comptoir-400.webp 400w, assets/img/salle-comptoir-800.webp 800w, assets/img/salle-comptoir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-comptoir.webp" alt="Le comptoir" loading="lazy"></button>
-      <button class="g" data-src="assets/img/oeufs-brouilles.webp"><img width="1200" height="1600" srcset="assets/img/oeufs-brouilles-400.webp 400w, assets/img/oeufs-brouilles-800.webp 800w, assets/img/oeufs-brouilles.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/oeufs-brouilles.webp" alt="Petit déjeuner, œufs brouillés" loading="lazy"></button>
-      <button class="g g--tall" data-src="assets/img/salle-entree.webp"><img width="1200" height="1600" srcset="assets/img/salle-entree-400.webp 400w, assets/img/salle-entree-800.webp 800w, assets/img/salle-entree.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-entree.webp" alt="L'entrée de la salle" loading="lazy"></button>
-      <button class="g" data-src="assets/img/bacon-cheeseburger.webp"><img width="1200" height="1600" srcset="assets/img/bacon-cheeseburger-400.webp 400w, assets/img/bacon-cheeseburger-800.webp 800w, assets/img/bacon-cheeseburger.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/bacon-cheeseburger.webp" alt="Bacon cheeseburger" loading="lazy"></button>
-      <button class="g" data-src="assets/img/terrasse-plats.webp"><img width="1200" height="1600" srcset="assets/img/terrasse-plats-400.webp 400w, assets/img/terrasse-plats-800.webp 800w, assets/img/terrasse-plats.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/terrasse-plats.webp" alt="Déjeuner en terrasse" loading="lazy"></button>
-      <button class="g" data-src="assets/img/dejeuner-terrasse.webp"><img width="1200" height="1600" srcset="assets/img/dejeuner-terrasse-400.webp 400w, assets/img/dejeuner-terrasse-800.webp 800w, assets/img/dejeuner-terrasse.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/dejeuner-terrasse.webp" alt="Salade en terrasse" loading="lazy"></button>
-      <button class="g" data-src="assets/img/salle-miroir.webp"><img width="1200" height="1600" srcset="assets/img/salle-miroir-400.webp 400w, assets/img/salle-miroir-800.webp 800w, assets/img/salle-miroir.webp 1200w" sizes="(max-width: 700px) 50vw, 25vw" src="assets/img/salle-miroir.webp" alt="Coin de la salle" loading="lazy"></button>
-    </div>
-  </section>
-
-  <!-- AVIS GOOGLE -->
-  <section class="avis" id="avis">
-    <div class="wrap avis__grid">
-      <div class="avis__score">
-        <p class="eyebrow" data-i18n="avis.eyebrow">Avis Google</p>
-        <p class="avis__big"><span class="js-rating">4,4</span><small>/5</small></p>
-        <span class="stars stars--lg js-stars" aria-hidden="true"></span>
-        <p class="avis__count"><span data-i18n="avis.based">Sur</span> <strong class="js-count">954</strong> <span data-i18n="avis.reviews">avis clients</span></p>
-        <div class="avis__links">
-          <a class="btn btn--red js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.all">Tous les avis</a>
-          <a class="link js-greviews" href="#" target="_blank" rel="noopener" data-i18n="avis.write">Laisser un avis</a>
-        </div>
-      </div>
-      <div class="avis__list">
-        <div class="avis__track" id="avisTrack"></div>
-        <div class="avis__nav">
-          <button type="button" class="round" id="avisPrev" aria-label="Avis précédent">&larr;</button>
-          <button type="button" class="round" id="avisNext" aria-label="Avis suivant">&rarr;</button>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -331,10 +336,10 @@
   <div class="lightbox__media" id="lightboxMedia"></div>
 </div>
 
-<script src="assets/js/config.js?v=28"></script>
-<script src="assets/js/carte.js?v=28"></script>
-<script src="assets/js/i18n.js?v=28"></script>
-<script src="assets/js/motion.js?v=28"></script>
-<script src="assets/js/main.js?v=28"></script>
+<script src="assets/js/config.js?v=29"></script>
+<script src="assets/js/carte.js?v=29"></script>
+<script src="assets/js/i18n.js?v=29"></script>
+<script src="assets/js/motion.js?v=29"></script>
+<script src="assets/js/main.js?v=29"></script>
 </body>
 </html>
