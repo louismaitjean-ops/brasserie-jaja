@@ -1,7 +1,6 @@
 /*
  * ANIMATIONS AU DÉFILEMENT
- * Apparitions, titres mot à mot, photos en rideau, parallaxe, bandeau défilant,
- * compteur de la note, frise qui se trace, barre de progression.
+ * Apparitions douces au défilement et compteur de la note.
  * Tout est désactivé si le visiteur a demandé « réduire les animations ».
  */
 (function () {
@@ -61,17 +60,6 @@
     io.observe(el);
   }
 
-  /* Titres découpés mot à mot (refait après un changement de langue) */
-  function split(el) {
-    var text = el.textContent.trim().replace(/\s+/g, " ");
-    if (el._split === text && el.querySelector(".w")) return;
-    el.innerHTML = text.split(" ").map(function (w, i) {
-      return '<span class="w"><span style="--i:' + i + '">' + esc(w) + "</span></span>";
-    }).join(" ");
-    el._split = text;
-    watch(el, "split");
-  }
-
   /* Compteur (note et nombre d'avis) */
   function countUp(el) {
     var txt = el.textContent;
@@ -95,11 +83,8 @@
   var parallax = [];
 
   api.refresh = function () {
-    $$(".h2, .page-hero h1").forEach(split);
-
     $$(".eyebrow").forEach(function (el) {
-      if (el.closest(".hero, .section-head--center")) return;
-      el.classList.add("eyebrow--line");
+      if (el.closest(".hero")) return;
       watch(el, "reveal");
     });
 
@@ -111,15 +96,14 @@
     [".sig-grid", ".tour__row", ".heures__grid", ".ligne", ".moments", ".hours", ".infos__list", ".vins__cols", ".valeurs__grid", ".sourcing__grid", ".equipe__grid", "#avisTrack"].forEach(function (sel) {
       $$(sel).forEach(function (group) {
         Array.prototype.forEach.call(group.children, function (child, i) {
-          var isMask = child.matches(".sig");
-          watch(child, isMask ? "mask" : "reveal", i * 90);
+          watch(child, "reveal", i * 70);
         });
       });
     });
 
     // photos en rideau
-    $$(".maison__photo, .quartier__vue, .tl figure, .membre__photo, .infos__map").forEach(function (el, i) { watch(el, "mask", el.matches(".maison__photo--b") ? 180 : 0); });
-    $$(".galerie .g").forEach(function (el, i) { watch(el, "mask", (i % 4) * 110); });
+    $$(".maison__photo, .quartier__vue, .tl figure, .membre__photo, .infos__map").forEach(function (el, i) { watch(el, "reveal"); });
+    $$(".galerie .g").forEach(function (el, i) { watch(el, "reveal", (i % 3) * 70); });
     $$(".tl > div").forEach(function (el) { watch(el, "reveal", 120); });
     $$(".tl").forEach(function (el) { watch(el, ""); });
 
@@ -130,12 +114,7 @@
       watch(score, "");
     }
 
-    // parallaxe : [élément à déplacer, référence, amplitude]
     parallax = [];
-    $$(".maison__photo--a img").forEach(function (img) { parallax.push([img, img.parentNode, 0.08]); });
-    $$(".maison__photo--b img").forEach(function (img) { parallax.push([img, img.parentNode, 0.12]); });
-    $$(".tl figure img").forEach(function (img) { parallax.push([img, img.parentNode, 0.08]); });
-    $$(".teaser__img").forEach(function (img) { parallax.push([img, img.parentNode, 0.1]); });
 
     measureBand();
     update();

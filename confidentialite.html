@@ -25,9 +25,17 @@
   </script>
   <link rel="preload" href="assets/fonts/caslon-display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/jaja.css?v=42">
+  <link rel="stylesheet" href="assets/css/jaja.css?v=51">
 </head>
 <body>
+
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <a class="topbar__item topbar__addr" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>47 rue d'Amsterdam, 75008 Paris</a>
+    <a class="topbar__item" href="tel:+33967408593"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>09 67 40 85 93</a>
+    <span class="topbar__open quick__open" id="openNowTop"></span>
+  </div>
+</div>
 
 <header class="nav" id="nav">
   <a class="nav__logo" href="index.html" aria-label="Brasserie Jaja, accueil">
@@ -136,23 +144,42 @@
 
 <footer class="footer">
   <div class="wrap footer__grid">
-    <img src="assets/img/logo-jaja-sand.png" alt="Brasserie Jaja" class="footer__logo" width="455" height="200" loading="lazy">
     <div>
-      <p>47 rue d'Amsterdam, 75008 Paris<br><a href="tel:+33967408593">09 67 40 85 93</a></p>
-      <p><a class="footer__insta" href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg><span>@brasseriejaja</span></a></p>
+      <img src="assets/img/logo-jaja-sand.png" alt="Brasserie Jaja" class="footer__logo" width="455" height="200" loading="lazy">
+      <p data-i18n="footer.about">Brasserie parisienne à deux pas de Saint-Lazare, ouverte tous les jours.</p>
+      <p><a class="footer__insta" href="https://www.instagram.com/brasseriejaja/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg><span>@brasseriejaja</span></a></p>
     </div>
-    <div class="footer__small">
+    <div>
+      <h2 class="footer__h" data-i18n="footer.contact">Contact</h2>
+      <p>47 rue d'Amsterdam<br>75008 Paris</p>
+      <p><a href="tel:+33967408593">09 67 40 85 93</a></p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="footer.hours">Horaires</h2>
+      <p><span data-i18n="infos.d1">Lundi – vendredi</span> : 8h – 1h<br><span data-i18n="infos.d2">Samedi</span> : 9h – 1h<br><span data-i18n="infos.d3">Dimanche</span> : 9h – 23h</p>
+    </div>
+    <div>
+      <h2 class="footer__h" data-i18n="footer.nav">Navigation</h2>
+      <ul class="footer__links">
+        <li><a href="index.html#carte" data-i18n="nav.carte">La carte</a></li>
+        <li><a href="index.html#avis" data-i18n="nav.avis">Avis</a></li>
+        <li><a href="histoire.html" data-i18n="nav.histoire">Notre histoire</a></li>
+        <li><a href="index.html#infos" data-i18n="nav.infos">Infos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="wrap footer__bottom-in">
       <p>© <span id="year">2026</span> Brasserie Jaja · <span data-i18n="footer.alcohol">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></p>
-      <p><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a></p>
-      <p><span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
+      <p><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a> · <a href="confidentialite.html" data-i18n="footer.privacy">Confidentialité</a> · <span data-i18n="footer.by">Site réalisé par</span> <a href="https://www.flipster.agency" target="_blank" rel="noopener">Flipster</a></p>
     </div>
   </div>
 </footer>
 
 
-<script src="assets/js/config.js?v=42"></script>
-<script src="assets/js/i18n.js?v=42"></script>
-<script src="assets/js/motion.js?v=42"></script>
-<script src="assets/js/main.js?v=42"></script>
+<script src="assets/js/config.js?v=51"></script>
+<script src="assets/js/i18n.js?v=51"></script>
+<script src="assets/js/motion.js?v=51"></script>
+<script src="assets/js/main.js?v=51"></script>
 </body>
 </html>
