@@ -704,3 +704,58 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .faq__item p { margin: -6px 0 20px; color: var(--ink-soft); max-width: 60ch; }
 @media (max-width: 900px) { .faq__grid { grid-template-columns: 1fr; } .faq .section-head { margin-bottom: 8px; } }
 @media (max-width: 700px) { .faq { padding: 56px 0; } .faq__item summary { font-size: 18px; padding: 16px 0; } }
+
+/* =====================================================================
+   NOUVEAU FOND : le terrazzo de la salle, et le festonné du store de la terrasse.
+   Mêmes couleurs, mêmes polices, même contenu.
+   ===================================================================== */
+:root { --feston: 14px; --arrondi: 16px; }
+body { background-color: var(--paper); background-image: url("../img/terrazzo-clair.svg"); background-size: 420px; }
+
+/* Grandes sections : terrazzo sable sur fond clair, terrazzo discret sur fond noir */
+.carte, .infos, .equipe { background-color: var(--stone); background-image: url("../img/terrazzo-clair.svg"); background-size: 420px; background-position: 90px 40px; }
+.quartier, .valeurs, .footer, .galerie { background-color: var(--ink); background-image: url("../img/terrazzo-sombre.svg"); background-size: 420px; }
+.galerie { padding: 8px; }
+.galerie__grid { background: none; gap: 8px; }
+
+/* Festons, comme le bord d'un store de brasserie, entre les sections */
+.quartier, .maison, .carte, .infos, .equipe, .valeurs, .footer, .galerie, .avis { position: relative; }
+.quartier::before, .maison::before, .avis::before, .carte::before, .infos::before, .equipe::before, .valeurs::before, .footer::before, .galerie::before {
+  content: ""; position: absolute; left: 0; right: 0; top: calc(var(--feston) * -1 + 1px); height: var(--feston); z-index: 2; pointer-events: none;
+  background: radial-gradient(circle at 50% 100%, var(--feston-c) 0 calc(var(--feston) - .5px), transparent var(--feston)) 0 0 / calc(var(--feston) * 2) var(--feston) repeat-x;
+}
+.quartier, .valeurs, .footer, .galerie { --feston-c: var(--ink); }
+.carte, .infos, .equipe { --feston-c: var(--stone); }
+.maison, .avis { --feston-c: var(--paper); }
+
+/* Formes : tout s'arrondit un peu, sans changer de style */
+.btn { border-radius: 999px; padding: 0 28px; }
+.quick__item { border-radius: 14px; background: var(--paper); }
+.quick__item--main { background: var(--sand); }
+.maison__photo, .quartier__photo, .sig, .g, .membre__photo, .tl figure, .infos__map, .review, .teaser__box, .carte__cover { border-radius: var(--arrondi); overflow: hidden; }
+.sig { border-radius: 0; }
+.sig img { border-radius: var(--arrondi); }
+.review { background: var(--paper); }
+.teaser__box { border-radius: 22px; }
+.teaser__box::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--line); border-radius: 15px; pointer-events: none; }
+.chip { background: var(--paper); }
+.gbadge { border-radius: 999px; }
+
+/* La carte devient une feuille posée sur le terrazzo */
+.carte__board { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: clamp(18px, 4vw, 44px); box-shadow: 0 18px 40px -28px rgba(27, 26, 23, .45); }
+.carte__tabs { border-bottom: 0; gap: 6px; }
+.carte__tabs button { border: 1px solid transparent; border-radius: 999px; margin: 0; padding: 12px 16px; }
+.carte__tabs button[aria-selected="true"] { background: var(--ink); color: var(--sand); border-color: var(--ink); }
+.faq__list { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 6px clamp(18px, 3vw, 32px); }
+.faq__item:last-child { border-bottom: 0; }
+
+@media (max-width: 700px) {
+  :root { --feston: 10px; --arrondi: 14px; }
+  .carte__tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding: 8px 0; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
+  .carte__tabs::-webkit-scrollbar { display: none; }
+  .carte__tabs button { flex: none; }
+  .carte__board { padding: 14px 16px 18px; }
+  .carte__cover { margin-left: 0; margin-right: 0; aspect-ratio: 16/9; }
+  .galerie { padding: 6px; }
+  .galerie__grid { gap: 6px; }
+}
