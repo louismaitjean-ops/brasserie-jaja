@@ -20,12 +20,9 @@
   <meta property="og:image:width" content="1400">
   <meta property="og:image:height" content="700">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#F3D9A8">
+  <meta name="theme-color" content="#A23C1C">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/caslon-display.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/caslon-text-italic.woff2" as="font" type="font/woff2" crossorigin>
   <script>
     if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion");
     // Au rechargement : toujours revenir en haut de la page (et oublier l'ancre #section)
@@ -38,7 +35,9 @@
         window.addEventListener("load",function(){top();setTimeout(top,0);});
       }})();
   </script>
-  <link rel="stylesheet" href="assets/css/style.css?v=34">
+  <link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/jaja.css?v=41">
   <script type="application/ld+json">
 [
  {
@@ -243,26 +242,28 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img width="1400" height="700" class="hero__img" srcset="assets/img/salle-bar-400.webp 400w, assets/img/salle-bar-800.webp 800w, assets/img/salle-bar.webp 1400w" sizes="100vw" src="assets/img/salle-bar.webp" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
     <div class="hero__inner">
       <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Brasserie · Saint-Lazare · Paris 8e</p>
-      <h1 class="hero__title">
-        <img src="assets/img/logo-jaja-ink.png" alt="Brasserie Jaja" width="455" height="200">
-        <span class="sr" data-i18n="hero.h1">, restaurant et bar à Saint-Lazare, Paris 8e</span>
-      </h1>
-      <p class="hero__lead" data-i18n="hero.lead">Du premier café au dernier verre, tous les jours.</p>
-      <a class="hero__addr" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg><span data-i18n="hero.addr">47 rue d'Amsterdam · Paris 8e · Métro Liège</span></a>
+      <h1 class="hero__title"><span class="sr" data-i18n="hero.h1">Brasserie Jaja, restaurant et bar à Saint-Lazare, Paris 8e : </span><span data-i18n="hero.lead">Du premier café au dernier verre, tous les jours.</span></h1>
       <div class="hero__cta">
-        <a class="btn btn--ghost" href="#carte" data-i18n="cta.menu">Voir la carte</a>
+        <a class="btn btn--sand" href="#carte" data-i18n="cta.menu">Voir la carte</a>
+        <button class="btn btn--line-light js-book" type="button" data-i18n="cta.bookTable">Réserver une table</button>
       </div>
     </div>
-    <a class="hero__scroll" href="#maison" aria-label="Découvrir"><span></span></a>
+    <div class="hero__vue">
+    <img width="1400" height="700" class="hero__img" srcset="assets/img/salle-bar-400.webp 400w, assets/img/salle-bar-800.webp 800w, assets/img/salle-bar.webp 1400w" sizes="100vw" src="assets/img/salle-bar.webp" alt="La salle de la Brasserie Jaja, banquettes en velours et bar" fetchpriority="high">
+      <a class="plaque" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" aria-label="47 rue d'Amsterdam, Paris 8e, itinéraire">
+        <span class="plaque__num">47</span>
+        <span class="plaque__rue"><small>8<sup>e</sup> Arr<sup>t</sup></small><strong>Rue d'Amsterdam</strong></span>
+      </a>
+      <p class="hero__addr" data-i18n="hero.addr">47 rue d'Amsterdam · Paris 8e · Métro Liège</p>
     <a class="gbadge" href="#avis">
       <svg class="gbadge__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6C12.3 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 7l7.4 5.7c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.4 28.8c-.5-1.4-.8-3-.8-4.8s.3-3.3.8-4.8l-7.8-6C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.8-6z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.4 0-11.7-4.1-13.6-9.8l-7.8 6C6.6 42.6 14.6 48 24 48z"/></svg>
       <span class="gbadge__score js-rating">4,4</span>
       <span class="stars js-stars" aria-hidden="true"></span>
       <span class="gbadge__count"><span class="js-count">954</span> <span data-i18n="reviews.word">avis</span></span>
     </a>
+    </div>
   </section>
 
   <!-- ACCÈS RAPIDES (mobile) -->
@@ -290,22 +291,27 @@
 
   <!-- L'EMPLACEMENT -->
   <section class="quartier" id="quartier">
-    <div class="wrap quartier__grid">
-      <figure class="quartier__photo"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="(max-width: 900px) 100vw, 55vw" src="assets/img/rue-terrasse.webp" alt="La terrasse de la Brasserie Jaja sur la rue piétonne" loading="lazy"></figure>
-      <div class="quartier__text">
-        <p class="eyebrow eyebrow--light" data-i18n="quartier.eyebrow">L'emplacement</p>
-        <h2 class="h2" data-i18n="quartier.title">À deux pas de Saint-Lazare, en plein cœur du 8e.</h2>
-        <p data-i18n="quartier.p">Une terrasse au calme, sur une rue piétonne, à quelques minutes de la gare et des grands magasins. En sortant du train, du bureau ou du shopping, le Jaja est sur votre chemin.</p>
-        <ul class="quartier__list">
-          <li><span class="quartier__min">1<small>min</small></span><span><strong data-i18n="quartier.l1">Métro Liège</strong><em data-i18n="quartier.l1s">Ligne 13, juste en bas</em></span></li>
-          <li><span class="quartier__min">5<small>min</small></span><span><strong data-i18n="quartier.l2">Gare Saint-Lazare</strong><em data-i18n="quartier.l2s">Trains, RER E, métros 3, 12, 13, 14</em></span></li>
-          <li><span class="quartier__min">7<small>min</small></span><span><strong data-i18n="quartier.l3">Place de Clichy</strong><em data-i18n="quartier.l3s">Métros 2 et 13</em></span></li>
-          <li><span class="quartier__min">12<small>min</small></span><span><strong data-i18n="quartier.l4">Opéra et grands magasins</strong><em data-i18n="quartier.l4s">Printemps, Galeries Lafayette</em></span></li>
-        </ul>
-        <p class="quartier__note" data-i18n="quartier.note">Temps de marche indicatifs.</p>
-        <a class="btn btn--sand" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" data-i18n="quartier.cta">Itinéraire jusqu'au Jaja</a>
+    <div class="wrap">
+      <div class="quartier__head">
+        <div>
+          <p class="eyebrow" data-i18n="quartier.eyebrow">L'emplacement</p>
+          <h2 class="h2" data-i18n="quartier.title">À deux pas de Saint-Lazare, en plein cœur du 8e.</h2>
+        </div>
+        <div class="quartier__text">
+          <p data-i18n="quartier.p">Une terrasse au calme, sur une rue piétonne, à quelques minutes de la gare et des grands magasins. En sortant du train, du bureau ou du shopping, le Jaja est sur votre chemin.</p>
+          <a class="btn btn--dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie+Jaja+47+rue+d%27Amsterdam+75008+Paris" target="_blank" rel="noopener" data-i18n="quartier.cta">Itinéraire jusqu'au Jaja</a>
+        </div>
       </div>
+      <ol class="ligne">
+        <li class="ligne__st"><span class="ligne__min">12<small>min</small></span><strong data-i18n="quartier.l4">Opéra et grands magasins</strong><em data-i18n="quartier.l4s">Printemps, Galeries Lafayette</em></li>
+        <li class="ligne__st"><span class="ligne__min">5<small>min</small></span><strong data-i18n="quartier.l2">Gare Saint-Lazare</strong><em data-i18n="quartier.l2s">Trains, RER E, métros 3, 12, 13, 14</em></li>
+        <li class="ligne__st"><span class="ligne__min">1<small>min</small></span><strong data-i18n="quartier.l1">Métro Liège</strong><em data-i18n="quartier.l1s">Ligne 13, juste en bas</em></li>
+        <li class="ligne__st ligne__st--jaja"><span class="ligne__min">Jaja</span><strong>47 rue d'Amsterdam</strong><em data-i18n="quartier.here">Vous y êtes</em></li>
+        <li class="ligne__st"><span class="ligne__min">7<small>min</small></span><strong data-i18n="quartier.l3">Place de Clichy</strong><em data-i18n="quartier.l3s">Métros 2 et 13</em></li>
+      </ol>
+      <p class="quartier__note" data-i18n="quartier.note">Temps de marche indicatifs.</p>
     </div>
+    <figure class="quartier__vue"><img width="1600" height="901" srcset="assets/img/rue-terrasse-400.webp 400w, assets/img/rue-terrasse-800.webp 800w, assets/img/rue-terrasse.webp 1600w" sizes="100vw" src="assets/img/rue-terrasse.webp" alt="La terrasse de la Brasserie Jaja sur la rue piétonne" loading="lazy"></figure>
   </section>
 
   <!-- LA MAISON -->
@@ -518,10 +524,10 @@
   <div class="lightbox__media" id="lightboxMedia"></div>
 </div>
 
-<script src="assets/js/config.js?v=34"></script>
-<script src="assets/js/carte.js?v=34"></script>
-<script src="assets/js/i18n.js?v=34"></script>
-<script src="assets/js/motion.js?v=34"></script>
-<script src="assets/js/main.js?v=34"></script>
+<script src="assets/js/config.js?v=41"></script>
+<script src="assets/js/carte.js?v=41"></script>
+<script src="assets/js/i18n.js?v=41"></script>
+<script src="assets/js/motion.js?v=41"></script>
+<script src="assets/js/main.js?v=41"></script>
 </body>
 </html>

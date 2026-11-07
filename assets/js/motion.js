@@ -105,10 +105,10 @@
 
     $$(".maison__text > p, .vins__intro, .teaser__box > p:not(.eyebrow), .teaser__box .btn, .story-intro .lead, .story-intro p, " +
        ".carte__tabs, .carte__filters, .carte__legal, .infos__addr, .infos__open, .infos__cta, .avis__nav, .avis__links, " +
-       ".quartier__text > p:not(.eyebrow), .quartier__text .btn, .avis__big, .avis__count, .cta-band .hero__cta, .footer__grid > *").forEach(function (el) { watch(el, "reveal"); });
+       ".quartier__text > p, .quartier__text .btn, .avis__big, .avis__count, .cta-band .hero__cta, .footer__grid > *").forEach(function (el) { watch(el, "reveal"); });
 
     // groupes en cascade
-    [".sig-grid", ".tour__row", ".heures__grid", ".quartier__list", ".moments", ".hours", ".infos__list", ".vins__cols", ".valeurs__grid", ".sourcing__grid", ".equipe__grid", "#avisTrack"].forEach(function (sel) {
+    [".sig-grid", ".tour__row", ".heures__grid", ".ligne", ".moments", ".hours", ".infos__list", ".vins__cols", ".valeurs__grid", ".sourcing__grid", ".equipe__grid", "#avisTrack"].forEach(function (sel) {
       $$(sel).forEach(function (group) {
         Array.prototype.forEach.call(group.children, function (child, i) {
           var isMask = child.matches(".sig");
@@ -118,7 +118,7 @@
     });
 
     // photos en rideau
-    $$(".maison__photo, .quartier__photo, .tl figure, .membre__photo, .infos__map").forEach(function (el, i) { watch(el, "mask", el.matches(".maison__photo--b") ? 180 : 0); });
+    $$(".maison__photo, .quartier__vue, .tl figure, .membre__photo, .infos__map").forEach(function (el, i) { watch(el, "mask", el.matches(".maison__photo--b") ? 180 : 0); });
     $$(".galerie .g").forEach(function (el, i) { watch(el, "mask", (i % 4) * 110); });
     $$(".tl > div").forEach(function (el) { watch(el, "reveal", 120); });
     $$(".tl").forEach(function (el) { watch(el, ""); });
@@ -205,10 +205,6 @@
 
   /* ---------- Boucle de défilement ---------- */
   var nav = $("#nav");
-  var hero = $(".hero, .page-hero");
-  var heroImg = hero && $(".hero__img, .page-hero > img", hero);
-  var heroInner = hero && $(".hero__inner, .page-hero .wrap", hero);
-  var heroCue = $(".hero__scroll");
   var tlList = $(".timeline ol");
   var lastY = window.scrollY;
   var prevY = lastY;
@@ -229,19 +225,6 @@
       else if (y < lastY - 4 || y < 320 || menuOpen) nav.classList.remove("is-hidden");
     }
     lastY = y;
-
-    if (hero) {
-      var h = hero.offsetHeight;
-      if (y < h) {
-        var p = y / h;
-        if (heroImg) heroImg.style.translate = "0 " + (y * 0.35).toFixed(1) + "px";
-        if (heroInner) {
-          heroInner.style.translate = "0 " + (y * 0.18).toFixed(1) + "px";
-          heroInner.style.opacity = clamp(1 - p * 1.5, 0, 1).toFixed(3);
-        }
-        if (heroCue) heroCue.style.opacity = clamp(1 - p * 4, 0, 1).toFixed(3);
-      }
-    }
 
     parallax.forEach(function (it) {
       var r = it[1].getBoundingClientRect();

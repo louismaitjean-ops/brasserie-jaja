@@ -8,7 +8,8 @@ window.I18N = {
   en: {
     "skip": "Skip to the menu",
     "nav.maison": "The place",
-    "hero.h1": ", restaurant and bar near Saint-Lazare, Paris 8th",
+    "hero.h1": "Brasserie Jaja, restaurant and bar near Saint-Lazare, Paris 8th: ",
+    "quartier.here": "You're here",
     "hero.addr": "47 rue d'Amsterdam · Paris 8th · Liège metro",
     "faq.eyebrow": "Good to know",
     "faq.title": "Frequently asked questions",
